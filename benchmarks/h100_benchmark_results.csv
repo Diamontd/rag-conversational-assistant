@@ -1,0 +1,5 @@
+Model,Recall,MRR,NDCG
+infgrad/stella-base-en-v2,0.3745,0.2855833333333333,0.305626182970538
+ai-sage/Giga-Embeddings-instruct,0.3895,0.29533333333333334,0.3171499019848239
+ai-sage/Giga-Embeddings-instruct + BGE-Base (Pre-trained),0.355,0.2659166666666667,0.2859089154089309
+ai-sage/Giga-Embeddings-instruct + BGE-Finetuned,0.413,0.3174166666666666,0.3386944939303596

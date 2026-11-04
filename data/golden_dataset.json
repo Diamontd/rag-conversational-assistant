@@ -1,0 +1,138 @@
+[
+  {
+    "scenario_id": "SCEN-01",
+    "title": "Health Plan Spousal Removal Outside Open Enrollment",
+    "turn1_user": "Can I drop my spouse from my policy right now?",
+    "turn2_user": "It is an employer health insurance policy, we are not legally divorced, and open enrollment is closed.",
+    "expected_category": "health",
+    "target_doc_ids": ["DOC-1001", "DOC-1002", "DOC-1004"],
+    "required_key_facts": ["Qualifying Life Event", "written consent", "Section 125"]
+  },
+  {
+    "scenario_id": "SCEN-02",
+    "title": "Tax Treatment of Long-Term Care Insurance Benefits",
+    "turn1_user": "Are my insurance benefits taxed?",
+    "turn2_user": "I am receiving per-diem benefits from my tax-qualified long-term care insurance policy.",
+    "expected_category": "long_term_care",
+    "target_doc_ids": ["DOC-2001"],
+    "required_key_facts": ["Section 7702B", "tax-free", "IRS daily per-diem cap"]
+  },
+  {
+    "scenario_id": "SCEN-03",
+    "title": "Understanding Split Limits in Auto Liability Insurance",
+    "turn1_user": "What do the numbers on my insurance card mean?",
+    "turn2_user": "On my auto insurance declaration page it lists liability limits like 100/300/100.",
+    "expected_category": "auto",
+    "target_doc_ids": ["DOC-3001"],
+    "required_key_facts": ["bodily injury per person", "bodily injury total per accident", "property damage"]
+  },
+  {
+    "scenario_id": "SCEN-04",
+    "title": "Removing an Ex-Spouse from an Auto Insurance Policy",
+    "turn1_user": "How do I take someone off my insurance after separation?",
+    "turn2_user": "I need to remove my separated spouse from my personal auto insurance policy so I am not paying for their driving.",
+    "expected_category": "auto",
+    "target_doc_ids": ["DOC-3002"],
+    "required_key_facts": ["proof of separate insurance", "change of address", "Named Driver Exclusion"]
+  },
+  {
+    "scenario_id": "SCEN-05",
+    "title": "Taxability of Life Insurance Death Benefits and Payout Options",
+    "turn1_user": "Will the government take taxes from my insurance payout?",
+    "turn2_user": "My father passed away and left me a lump sum death benefit payout from his term life insurance policy.",
+    "expected_category": "life",
+    "target_doc_ids": ["DOC-4002"],
+    "required_key_facts": ["Section 101(a)", "lump sum income tax exempt", "installment interest is taxable"]
+  },
+  {
+    "scenario_id": "SCEN-06",
+    "title": "Where to Buy Whole Life Insurance Policies",
+    "turn1_user": "Where should I go to buy a policy?",
+    "turn2_user": "I want to purchase permanent whole life insurance with guaranteed cash value and need to know whether to use an independent broker or direct agent.",
+    "expected_category": "life",
+    "target_doc_ids": ["DOC-4001"],
+    "required_key_facts": ["independent broker", "captive agent", "guaranteed cash value"]
+  },
+  {
+    "scenario_id": "SCEN-07",
+    "title": "Calculating Renters Insurance Personal Property and Liability",
+    "turn1_user": "How much coverage do I really need to buy?",
+    "turn2_user": "I am moving into a leased apartment and need to know how much renters personal property and liability insurance to purchase.",
+    "expected_category": "renters",
+    "target_doc_ids": ["DOC-5001"],
+    "required_key_facts": ["home inventory", "$15,000 to $20,000 minimum", "$100,000 to $300,000 liability"]
+  },
+  {
+    "scenario_id": "SCEN-08",
+    "title": "Medicare Indirect Medical Education (IME) Definition and Function",
+    "turn1_user": "What does IME mean in my medical billing document?",
+    "turn2_user": "It is on a Medicare inpatient hospital reimbursement form from a university teaching medical center.",
+    "expected_category": "medicare",
+    "target_doc_ids": ["DOC-6001"],
+    "required_key_facts": ["Indirect Medical Education", "teaching hospital adjustment", "CMS"]
+  },
+  {
+    "scenario_id": "SCEN-09",
+    "title": "Medicare Administration and Government Oversight",
+    "turn1_user": "Is the insurance run by the government or private companies?",
+    "turn2_user": "I am asking about federal Medicare healthcare coverage for seniors.",
+    "expected_category": "medicare",
+    "target_doc_ids": ["DOC-6002"],
+    "required_key_facts": ["CMS", "Department of Health and Human Services", "private Medicare Advantage contractors"]
+  },
+  {
+    "scenario_id": "SCEN-10",
+    "title": "Qualifying Activities of Daily Living for Long-Term Care",
+    "turn1_user": "How sick do I have to be before the insurance pays out?",
+    "turn2_user": "I have a tax-qualified long-term care policy and need to know what physical triggers allow me to claim benefits.",
+    "expected_category": "long_term_care",
+    "target_doc_ids": ["DOC-2002"],
+    "required_key_facts": ["2 of 6 Activities of Daily Living", "90 days", "severe cognitive impairment"]
+  },
+  {
+    "scenario_id": "SCEN-11",
+    "title": "Health Savings Account (HSA) Non-Qualified Withdrawal Penalties",
+    "turn1_user": "Can I pull my money out of my account without penalties?",
+    "turn2_user": "I want to take a cash withdrawal from my Health Savings Account (HSA) for non-medical expenses before age 65.",
+    "expected_category": "health",
+    "target_doc_ids": ["DOC-1003"],
+    "required_key_facts": ["Section 213(d)", "20% penalty", "ordinary income tax"]
+  },
+  {
+    "scenario_id": "SCEN-12",
+    "title": "Renters Loss of Use and Additional Living Expenses (ALE)",
+    "turn1_user": "Does my policy pay if I cannot live in my home?",
+    "turn2_user": "A pipe burst in my rented apartment causing flooding, and I need my renters insurance to cover hotel and food costs while repairs take place.",
+    "expected_category": "renters",
+    "target_doc_ids": ["DOC-5003"],
+    "required_key_facts": ["Loss of Use", "Coverage D", "Additional Living Expenses"]
+  },
+  {
+    "scenario_id": "SCEN-13",
+    "title": "Medicare Part B Late Enrollment Penalty Rules",
+    "turn1_user": "Is there a penalty if I delay signing up?",
+    "turn2_user": "I turned 65 last year and did not enroll in Medicare Part B because I was not working and had no group coverage.",
+    "expected_category": "medicare",
+    "target_doc_ids": ["DOC-6003"],
+    "required_key_facts": ["10% late enrollment penalty", "Initial Enrollment Period", "permanent premium increase"]
+  },
+  {
+    "scenario_id": "SCEN-14",
+    "title": "Tax Treatment of Auto Accident Injury and Property Damage Settlements",
+    "turn1_user": "Do I have to report my legal settlement on my tax return?",
+    "turn2_user": "I received an auto insurance settlement following a car crash covering medical injury bills and vehicle repairs.",
+    "expected_category": "auto",
+    "target_doc_ids": ["DOC-3003"],
+    "required_key_facts": ["physical injuries non-taxable", "property repair non-taxable", "punitive damages taxable"]
+  },
+  {
+    "scenario_id": "SCEN-15",
+    "title": "Changing Life Insurance Beneficiary and Spousal Rights",
+    "turn1_user": "Can I remove someone as my beneficiary without them knowing?",
+    "turn2_user": "I want to change the primary beneficiary on my personal life insurance policy in a community property state.",
+    "expected_category": "life",
+    "target_doc_ids": ["DOC-4003"],
+    "required_key_facts": ["revocable beneficiary", "community property state", "spousal waiver"]
+  }
+]
+

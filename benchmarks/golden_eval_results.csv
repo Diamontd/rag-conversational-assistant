@@ -1,0 +1,16 @@
+scenario_id,title,expected_category,extracted_category,category_match,t1_clarification_accuracy,t2_answer_accuracy,unfiltered_recall_at_3,unfiltered_mrr_at_3,unfiltered_category_precision_at_3,filtered_recall_at_3,filtered_mrr_at_3,filtered_category_precision_at_3,citation_faithfulness_pct,checklist_items_count,valid_citations_count,t1_latency_ms,t2_latency_ms,total_latency_ms
+SCEN-01,Health Plan Spousal Removal Outside Open Enrollment,health,health,True,1.0,1.0,0.6667,0.5,0.6667,1.0,1.0,1.0,100.0,4,4,1204.99,2830.41,4035.4
+SCEN-02,Tax Treatment of Long-Term Care Insurance Benefits,long_term_care,long_term_care,True,1.0,1.0,1.0,1.0,0.3333,1.0,1.0,1.0,100.0,1,1,633.06,1650.37,2283.43
+SCEN-03,Understanding Split Limits in Auto Liability Insurance,auto,auto,True,1.0,1.0,1.0,1.0,0.3333,1.0,1.0,1.0,100.0,1,1,665.69,1753.99,2419.68
+SCEN-04,Removing an Ex-Spouse from an Auto Insurance Policy,auto,auto,True,1.0,1.0,1.0,1.0,0.3333,1.0,1.0,1.0,100.0,3,3,736.2,4484.05,5220.25
+SCEN-05,Taxability of Life Insurance Death Benefits and Payout Options,life,life,True,1.0,1.0,1.0,0.3333,0.3333,1.0,1.0,1.0,100.0,3,3,3681.44,10529.91,14211.35
+SCEN-06,Where to Buy Whole Life Insurance Policies,life,life,True,1.0,1.0,1.0,1.0,0.6667,1.0,1.0,1.0,100.0,3,3,3013.02,6521.34,9534.36
+SCEN-07,Calculating Renters Insurance Personal Property and Liability,renters,renters,True,1.0,1.0,1.0,1.0,0.3333,1.0,1.0,1.0,100.0,3,3,3581.9,7487.07,11068.97
+SCEN-08,Medicare Indirect Medical Education (IME) Definition and Function,medicare,medicare,True,0.0,1.0,1.0,1.0,0.3333,1.0,1.0,1.0,100.0,3,3,7154.64,7084.4,14239.04
+SCEN-09,Medicare Administration and Government Oversight,medicare,medicare,True,1.0,1.0,1.0,1.0,0.6667,1.0,1.0,1.0,100.0,4,4,659.21,3819.6,4478.81
+SCEN-10,Qualifying Activities of Daily Living for Long-Term Care,long_term_care,long_term_care,True,1.0,1.0,1.0,1.0,1.0,1.0,0.5,1.0,100.0,3,3,665.1,2041.37,2706.47
+SCEN-11,Health Savings Account (HSA) Non-Qualified Withdrawal Penalties,health,health,True,1.0,1.0,1.0,1.0,0.3333,1.0,1.0,1.0,100.0,1,1,726.59,1731.63,2458.22
+SCEN-12,Renters Loss of Use and Additional Living Expenses (ALE),renters,renters,True,1.0,1.0,1.0,1.0,0.3333,1.0,1.0,1.0,100.0,2,2,634.35,8428.21,9062.56
+SCEN-13,Medicare Part B Late Enrollment Penalty Rules,medicare,medicare,True,1.0,1.0,1.0,1.0,0.3333,1.0,1.0,1.0,100.0,2,2,3898.15,7739.54,11637.69
+SCEN-14,Tax Treatment of Auto Accident Injury and Property Damage Settlements,auto,auto,True,1.0,1.0,1.0,1.0,0.3333,1.0,1.0,1.0,100.0,3,3,3692.89,7230.5,10923.39
+SCEN-15,Changing Life Insurance Beneficiary and Spousal Rights,life,life,True,0.0,1.0,1.0,1.0,0.3333,1.0,1.0,1.0,100.0,3,3,7059.67,7288.92,14348.59
