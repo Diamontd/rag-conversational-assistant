@@ -1,12 +1,12 @@
-# Autonomous Production Multi-Turn RAG Assistant, Evals & Retrieval Benchmark Suite
+# Multi-Turn Conversational RAG Assistant & Retrieval Benchmark
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Qdrant](https://img.shields.io/badge/VectorDB-Qdrant-red.svg)](https://qdrant.tech/)
 [![OpenAI SDK](https://img.shields.io/badge/API-OpenAI%20SDK%20Compatible-green.svg)](https://platform.openai.com/)
 [![Langfuse](https://img.shields.io/badge/Observability-Langfuse-purple.svg)](https://langfuse.com/)
-[![Tests](https://img.shields.io/badge/pytest-Passing%20100%25-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/pytest-Passing%20100%25-brightgreen.svg)](#3-run-verification-tests)
 
-An enterprise-grade Conversational Retrieval-Augmented Generation (RAG) assistant designed for high-consequence insurance advisory domains. Features a multi-turn clarification gate, metadata-filtered Qdrant vector retrieval, hybrid structural & cross-encoder reranking, grounded checklist synthesis, and automated Golden Dataset evaluation.
+A conversational Retrieval-Augmented Generation (RAG) assistant designed for insurance advisory domains. Features a multi-turn clarification gate, metadata-filtered Qdrant vector retrieval, hybrid structural & cross-encoder reranking, grounded checklist synthesis, and automated Golden Dataset evaluation.
 
 ---
 
@@ -103,7 +103,7 @@ A critical discovery from the NVIDIA A100 experiments is that applying a generic
 
 ## Part 2: Multi-Turn Conversational Assistant & Golden Dataset Evals
 
-To evaluate production robustness, a comprehensive Golden Dataset of **15 multi-turn domain scenarios** (`data/golden_dataset.json`) was executed through the automated evaluation harness (`src/eval_harness.py`).
+To evaluate multi-turn robustness, a Golden Dataset of **15 multi-turn domain scenarios** (`data/golden_dataset.json`) was executed through the automated evaluation harness (`src/eval_harness.py`).
 
 ### Golden Dataset Evaluation Results
 
@@ -128,7 +128,7 @@ To evaluate production robustness, a comprehensive Golden Dataset of **15 multi-
 
 ![Conversational Evaluation Chart](benchmarks/conversational_eval_chart.png)
 
-### Production Guarantees
+### Architectural & Retrieval Guarantees
 
 1. **Zero Hallucinated Document Citations:** Across all evaluated scenarios, 100% of generated checklist items cited valid, retrieved document IDs (`DOC-1001`, `DOC-2001`, etc.).
 2. **Categorical Boundary Isolation:** By routing queries through Qdrant metadata filters (`category="health"`), auto insurance questions never pollute health insurance recommendations.

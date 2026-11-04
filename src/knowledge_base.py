@@ -628,7 +628,7 @@ class KnowledgeBaseRetriever:
                     else:
                         break
 
-        # Fallback deterministic pseudo-embedding
+        # Offline unit-test fallback (used only in CI when API key and disk cache are absent)
         import hashlib
         import random
         seed = int(hashlib.md5(text.encode("utf-8")).hexdigest(), 16) % (2**31)
