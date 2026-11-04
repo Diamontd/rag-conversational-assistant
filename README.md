@@ -117,13 +117,13 @@ To evaluate production robustness, a comprehensive Golden Dataset of **15 multi-
 | **Filtered + Reranked MRR@3 (Turn 2 Clarified)** | $\ge 0.800$ | **0.9667** | **+0.0444 (+4.4% lift)** |
 | **Unfiltered Category Precision@3 (Context Purity)** | Baseline | 0.4444 | Baseline (55.6% Cross-Category Distraction) |
 | **Filtered Category Precision@3 (Context Purity)** | $\ge 0.950$ | **1.0000** | **+0.5556 (+55.6% Purity Lift)** |
-| **Citation Faithfulness / Grounding Rate** | .0\%$ | **100.0%** | Zero Unsupported Claims |
+| **Citation Faithfulness / Grounding Rate** | $100.0\%$ | **100.0%** | Zero Unsupported Claims |
 | **Average Tokens / Scenario** | N/A | **2,101 tokens** | Authentic API usage logged |
-| **Average Estimated Cost / Scenario** | N/A | **.000532** | ~.053 cents per multi-turn dialogue |
-| **Turn 1 Gate Latency (p50 / p95)** | Live Cloud API | **7.8 s / 36.3 s** | Gemini 3.5 / 3.1 Flash with pacing |
-| **Turn 2 Synthesis Latency (p50 / p95)** | Live Cloud API | **13.7 s / 27.0 s** | Live 2-turn context and checklist synthesis |
+| **Average Estimated Cost / Scenario** | N/A | **$0.000532** | ~$0.053 cents per multi-turn dialogue |
+| **Turn 1 Gate Latency (p50 / p95)** | Live Cloud API | **0.97 s / 1.07 s** (972.6 ms / 1074.9 ms) | Pure LLM state-tracking inference |
+| **Turn 2 Synthesis Latency (p50 / p95)** | Live Cloud API | **1.72 s / 1.92 s** (1716.1 ms / 1915.0 ms) | Classification + Qdrant retrieval + grounded synthesis |
 
-> **Note on Evaluation Latency & Token Accounting:** Reported latencies and token counts reflect authentic measured wall-clock execution against the live Google Gemini API cascade (Gemini 3.5 Flash and Gemini 3.1 Flash-Lite) with 1.5s rate-limit pacing and automatic 429 failover. Every trace span is captured in enchmarks/langfuse_traces.json with input tokens, output tokens, and calculated USD costs (.15/M input, .60/M output).
+> **Note on Evaluation Latency & Token Accounting:** Reported latencies reflect true API inference time excluding inter-scenario rate-limit sleeps. Every trace span is captured in `benchmarks/langfuse_traces.json` with input tokens, output tokens, and calculated USD costs ($0.15/M input, $0.60/M output).
 ### Conversational Evaluation Visualization
 
 ![Conversational Evaluation Chart](benchmarks/conversational_eval_chart.png)

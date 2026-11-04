@@ -33,10 +33,9 @@ CATEGORY_PATTERNS = [
 
 
 def _call_llm_with_retry(messages: List[Dict[str, str]], max_retries: int = 2) -> Optional[str]:
-    """Execute LLM chat completion with model failover, usage recording, and configurable pacing."""
+    """Execute LLM chat completion with model failover and usage recording."""
     if not config.api_key or config.api_key == "placeholder_key_for_offline_mode":
         return None
-    rate_limit_delay = float(os.getenv("RATE_LIMIT_DELAY_S", "1.5"))
     for model_name in config.fallback_models:
         for attempt in range(max_retries):
             try:
@@ -56,8 +55,6 @@ def _call_llm_with_retry(messages: List[Dict[str, str]], max_retries: int = 2) -
                     model_name=model_name,
                     estimated_cost_usd=estimated_cost_usd
                 )
-                if rate_limit_delay > 0.0:
-                    time.sleep(rate_limit_delay)
                 content = response.choices[0].message.content
                 return content.strip() if content else None
             except Exception as e:
@@ -65,7 +62,6 @@ def _call_llm_with_retry(messages: List[Dict[str, str]], max_retries: int = 2) -
                 if "429" in err_str or "quota" in err_str or "503" in err_str:
                     logger.warning(f"Model {model_name} rate limit or 503 ({e}), switching to next in cascade...")
                     break
-                time.sleep(1.0)
     return None
 
 

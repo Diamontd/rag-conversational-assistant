@@ -113,8 +113,8 @@ class AppConfig:
             self.provider = "gemini_compatibility"
             self.api_key = gemini_key or os.getenv("GEMINI_API_KEY", "")
             self.base_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
-            self.chat_model = os.getenv("CHAT_MODEL", "gemini-3.5-flash")
-            default_fallbacks = ["gemini-3.5-flash", "gemini-3.1-flash-lite", "gemini-2.5-flash", "gemini-2.5-flash-lite"]
+            self.chat_model = os.getenv("CHAT_MODEL", "gemini-2.5-flash")
+            default_fallbacks = ["gemini-2.5-flash", "gemini-3.1-flash-lite", "gemini-3.5-flash"]
             self.embedding_model = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
 
         # Ensure chat_model is always the primary model tried, deduplicated with failovers
@@ -122,9 +122,9 @@ class AppConfig:
 
         client_key = self.api_key if self.api_key else "placeholder_key_for_offline_mode"
         if self.base_url:
-            self.client = OpenAI(api_key=client_key, base_url=self.base_url, timeout=25.0)
+            self.client = OpenAI(api_key=client_key, base_url=self.base_url, timeout=12.0)
         else:
-            self.client = OpenAI(api_key=client_key, timeout=25.0)
+            self.client = OpenAI(api_key=client_key, timeout=12.0)
 
         # Langfuse Observability Configuration
         self.langfuse_public_key = os.getenv("LANGFUSE_PUBLIC_KEY")

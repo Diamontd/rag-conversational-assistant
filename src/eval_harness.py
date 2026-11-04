@@ -180,6 +180,11 @@ def run_evaluation_suite(
         os.makedirs(os.path.dirname(output_csv_path), exist_ok=True)
         df_prog.to_csv(output_csv_path, index=False)
 
+        # Rate-limit pacing between scenarios (outside of measured turn latencies)
+        rate_limit_delay = float(os.getenv("RATE_LIMIT_DELAY_S", "1.5"))
+        if rate_limit_delay > 0.0:
+            time.sleep(rate_limit_delay)
+
     df = pd.DataFrame(results_records)
     df.to_csv(output_csv_path, index=False)
     print(f"Successfully saved evaluation results to {output_csv_path}")

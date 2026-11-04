@@ -2,7 +2,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808065.437378,
-    "latency_ms": 6375.27,
+    "latency_ms": 828.2,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 421,
@@ -20,7 +20,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808065.4383357,
-    "latency_ms": 6376.22,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which type of insurance policy (such as health, auto, or life insurance) you are asking about?', extracted_category=None, search_query_rewritten='Can I drop my spous"
@@ -28,7 +28,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808072.8652015,
-    "latency_ms": 7425.9,
+    "latency_ms": 878.6,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 474,
@@ -46,7 +46,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808074.076035,
-    "latency_ms": 1209.8,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-1001', title='Dropping a Spouse from Employer Health Insurance Outside Open Enrollment', category='health', sub_topic='spouse_removal', content='Can you drop your spouse from your health insurance policy? The answer strictly depends on employer plan rules and state regula"
@@ -54,7 +54,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808088.32334,
-    "latency_ms": 14246.35,
+    "latency_ms": 1175.7,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 667,
@@ -100,7 +100,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808088.3253407,
-    "latency_ms": 22886.04,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='health', search_query_rewritten='Can I remove a spouse from an employer health insurance policy outside open enrollment without a legal divorce?'), 'response': "
@@ -108,7 +108,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808088.3317864,
-    "latency_ms": 5.45,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-3002', title='Removing a Spouse or Driver from Auto Insurance Policies', category='auto', sub_topic='spouse_driver_removal', content='To remove a spouse or resident driver from an auto insurance policy, insurers require verification that the individual is no longer operat"
@@ -116,7 +116,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808096.143028,
-    "latency_ms": 7806.25,
+    "latency_ms": 837.2,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 416,
@@ -134,7 +134,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808096.144027,
-    "latency_ms": 7807.25,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='To give you the most accurate answer, could you please specify which type of insurance benefits you are asking about (e.g., life, long-term care, health, or auto insurance)?', extracted_cate"
@@ -142,7 +142,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808100.7218077,
-    "latency_ms": 4576.78,
+    "latency_ms": 921.8,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 483,
@@ -160,7 +160,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808101.9659567,
-    "latency_ms": 1243.15,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-2001', title='Tax Treatment of Long-Term Care Insurance Benefits and Lump Sums', category='long_term_care', sub_topic='tax_treatment', content='Generally speaking, benefits paid under a tax-qualified Long-Term Care (LTC) insurance contract are received 100% tax-free under"
@@ -168,7 +168,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808110.6893454,
-    "latency_ms": 8721.38,
+    "latency_ms": 1436.0,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 704,
@@ -200,7 +200,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808110.6903405,
-    "latency_ms": 14545.32,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='long_term_care', search_query_rewritten='Are per-diem benefits received from a tax-qualified long-term care insurance policy taxable?'), 'response': GroundedAss"
@@ -208,7 +208,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808110.6986482,
-    "latency_ms": 5.32,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-2001', title='Tax Treatment of Long-Term Care Insurance Benefits and Lump Sums', category='long_term_care', sub_topic='tax_treatment', content='Generally speaking, benefits paid under a tax-qualified Long-Term Care (LTC) insurance contract are received 100% tax-free under"
@@ -216,7 +216,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808135.6447227,
-    "latency_ms": 24942.08,
+    "latency_ms": 885.8,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 420,
@@ -234,7 +234,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808135.6463342,
-    "latency_ms": 24943.69,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question=\"I'd be happy to help you understand your insurance card, but the information varies significantly depending on the type of coverage. Could you please tell me which type of insurance this car"
@@ -242,7 +242,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808140.7738268,
-    "latency_ms": 5125.5,
+    "latency_ms": 974.0,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 511,
@@ -260,7 +260,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808142.2769177,
-    "latency_ms": 1501.1,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-3001', title='Understanding Split Liability Limits in Auto Insurance Policies', category='auto', sub_topic='split_limits', content='Split limits refer to the bodily injury and property damage liability portion of an auto insurance policy broken down into three distinct nu"
@@ -268,7 +268,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808167.1585896,
-    "latency_ms": 24877.68,
+    "latency_ms": 1553.8,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 662,
@@ -306,7 +306,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808167.1595926,
-    "latency_ms": 31511.26,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='auto', search_query_rewritten='What do the auto insurance liability limits 100/300/100 mean on a declaration page?'), 'response': GroundedAssistantResponse(situ"
@@ -314,7 +314,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808167.1685517,
-    "latency_ms": 5.96,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-3001', title='Understanding Split Liability Limits in Auto Insurance Policies', category='auto', sub_topic='split_limits', content='Split limits refer to the bodily injury and property damage liability portion of an auto insurance policy broken down into three distinct nu"
@@ -322,7 +322,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808201.305281,
-    "latency_ms": 34131.74,
+    "latency_ms": 873.2,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 421,
@@ -340,7 +340,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808201.306693,
-    "latency_ms": 34133.15,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question=\"I'm sorry to hear about your separation. To provide you with the correct steps for removing someone from your policy, could you please clarify which type of insurance you are referring to (e"
@@ -348,7 +348,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808205.535078,
-    "latency_ms": 4227.42,
+    "latency_ms": 932.6,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 500,
@@ -366,7 +366,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808206.6772587,
-    "latency_ms": 1141.16,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-3002', title='Removing a Spouse or Driver from Auto Insurance Policies', category='auto', sub_topic='spouse_driver_removal', content='To remove a spouse or resident driver from an auto insurance policy, insurers require verification that the individual is no longer operat"
@@ -374,7 +374,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808214.8599923,
-    "latency_ms": 8181.74,
+    "latency_ms": 1363.8,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 650,
@@ -406,7 +406,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808214.861989,
-    "latency_ms": 13554.33,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='auto', search_query_rewritten='How to remove a separated spouse from a personal auto insurance policy'), 'response': GroundedAssistantResponse(situation_summary"
@@ -414,7 +414,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808214.870464,
-    "latency_ms": 7.48,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-3002', title='Removing a Spouse or Driver from Auto Insurance Policies', category='auto', sub_topic='spouse_driver_removal', content='To remove a spouse or resident driver from an auto insurance policy, insurers require verification that the individual is no longer operat"
@@ -422,7 +422,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808223.4186583,
-    "latency_ms": 8543.21,
+    "latency_ms": 855.2,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 420,
@@ -440,7 +440,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808223.4206553,
-    "latency_ms": 8545.2,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='To give you an accurate answer about taxes, could you please tell me what type of insurance policy you have (e.g., life, auto, health) and the nature of the payout you are expecting?', extra"
@@ -448,7 +448,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808231.6136916,
-    "latency_ms": 8190.04,
+    "latency_ms": 929.0,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 490,
@@ -466,7 +466,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808232.7319727,
-    "latency_ms": 1116.41,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-4002', title='Federal Income Tax Exemption on Life Insurance Death Benefits', category='life', sub_topic='tax_death_benefits', content='Under Internal Revenue Code Section 101(a), life insurance death benefits paid to a designated beneficiary as a lump sum are 100% exempt"
@@ -474,7 +474,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808239.1647034,
-    "latency_ms": 6430.74,
+    "latency_ms": 1523.4,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 661,
@@ -512,7 +512,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808239.167191,
-    "latency_ms": 15743.54,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='life', search_query_rewritten='Are lump sum death benefit payouts from a term life insurance policy subject to income tax in the United States?'), 'response': G"
@@ -520,7 +520,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808239.175077,
-    "latency_ms": 4.89,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-3003', title='Taxability of Auto Insurance Settlements and Property Damage Reimbursements', category='auto', sub_topic='tax_settlements', content='Under IRS guidelines, compensatory settlements received from auto insurance for physical injuries, physical sickness, and pro"
@@ -528,7 +528,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808247.6383479,
-    "latency_ms": 8459.25,
+    "latency_ms": 846.2,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 419,
@@ -546,7 +546,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808247.6403925,
-    "latency_ms": 8461.3,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='To help you find the right place to purchase a policy, could you please tell me what type of insurance you are looking for (e.g., health, auto, life, etc.)?', extracted_category=None, search"
@@ -554,7 +554,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808251.9954245,
-    "latency_ms": 4353.06,
+    "latency_ms": 936.2,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 492,
@@ -572,7 +572,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808253.1010678,
-    "latency_ms": 1103.62,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-4001', title='How and Where to Buy Whole Life Insurance: Agents vs. Direct Brokers', category='life', sub_topic='purchasing_whole_life', content='You can purchase Whole Life insurance through licensed independent life insurance agents, captive agents representing a single"
@@ -580,7 +580,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808271.4995286,
-    "latency_ms": 18395.44,
+    "latency_ms": 1513.9,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 647,
@@ -619,7 +619,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808271.5025628,
-    "latency_ms": 23860.2,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='life', search_query_rewritten='pros and cons of using an independent broker versus a direct agent when purchasing permanent whole life insurance with guaranteed"
@@ -627,7 +627,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808271.5106323,
-    "latency_ms": 6.08,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-4001', title='How and Where to Buy Whole Life Insurance: Agents vs. Direct Brokers', category='life', sub_topic='purchasing_whole_life', content='You can purchase Whole Life insurance through licensed independent life insurance agents, captive agents representing a single"
@@ -635,7 +635,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808280.9421103,
-    "latency_ms": 9427.49,
+    "latency_ms": 857.0,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 420,
@@ -653,7 +653,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808280.9440572,
-    "latency_ms": 9429.43,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='To give you an accurate recommendation on coverage amounts, could you please tell me which type of insurance you are asking about (e.g., auto, life, health, etc.) and a bit more about your c"
@@ -661,7 +661,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808285.1164894,
-    "latency_ms": 4170.0,
+    "latency_ms": 936.2,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 495,
@@ -679,7 +679,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808286.2514937,
-    "latency_ms": 1132.01,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-5001', title='Determining How Much Renters Insurance Should Be Purchased', category='renters', sub_topic='coverage_calculation', content=\"How much renters insurance you should purchase depends on the total replacement cost of your personal possessions and your personal li"
@@ -687,7 +687,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808294.6559546,
-    "latency_ms": 8401.45,
+    "latency_ms": 1071.2,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 668,
@@ -733,7 +733,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808294.6579468,
-    "latency_ms": 13711.46,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='renters', search_query_rewritten='How to determine appropriate coverage amounts for renters personal property and liability insurance for a new apartment lease."
@@ -741,7 +741,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808294.6666706,
-    "latency_ms": 4.73,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-5001', title='Determining How Much Renters Insurance Should Be Purchased', category='renters', sub_topic='coverage_calculation', content=\"How much renters insurance you should purchase depends on the total replacement cost of your personal possessions and your personal li"
@@ -749,7 +749,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808298.7326992,
-    "latency_ms": 4059.04,
+    "latency_ms": 795.8,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 420,
@@ -767,7 +767,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808299.9012678,
-    "latency_ms": 1166.57,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-1003', title='Health Savings Account (HSA) Tax Treatment and Qualified Medical Expenses', category='health', sub_topic='hsa_tax', content='Contributions to a Health Savings Account (HSA) are 100% tax-deductible or made pre-tax through employer payroll deductions. Earnings"
@@ -775,7 +775,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808336.0738764,
-    "latency_ms": 36167.62,
+    "latency_ms": 1247.9,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 649,
@@ -803,7 +803,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808336.076868,
-    "latency_ms": 41403.21,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='health', search_query_rewritten='What does the acronym IME stand for in the context of medical billing and health insurance?'), 'response': GroundedAssistantRes"
@@ -811,7 +811,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808340.6572802,
-    "latency_ms": 4578.39,
+    "latency_ms": 860.6,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 452,
@@ -829,7 +829,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808341.9101636,
-    "latency_ms": 1250.88,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-6001', title='Understanding Medicare Indirect Medical Education (IME) Adjustments', category='medicare', sub_topic='ime_adjustment', content=\"According to the Centers for Medicare and Medicaid Services (CMS.gov), IME stands for Indirect Medical Education. It represents a "
@@ -837,7 +837,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808346.694287,
-    "latency_ms": 4781.1,
+    "latency_ms": 1322.0,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 639,
@@ -869,7 +869,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808346.6972814,
-    "latency_ms": 10618.39,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='medicare', search_query_rewritten='What does the acronym IME mean on a Medicare inpatient hospital reimbursement form from a university teaching medical center?"
@@ -877,7 +877,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808346.70428,
-    "latency_ms": 5.0,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-6001', title='Understanding Medicare Indirect Medical Education (IME) Adjustments', category='medicare', sub_topic='ime_adjustment', content=\"According to the Centers for Medicare and Medicaid Services (CMS.gov), IME stands for Indirect Medical Education. It represents a "
@@ -885,7 +885,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808351.6847916,
-    "latency_ms": 4974.55,
+    "latency_ms": 844.4,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 421,
@@ -903,7 +903,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808351.6881354,
-    "latency_ms": 4977.89,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='To provide you with the correct information, could you please specify which type of insurance you are asking about (e.g., health, auto, life, etc.)?', extracted_category=None, search_query_r"
@@ -911,7 +911,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808356.0678053,
-    "latency_ms": 4376.68,
+    "latency_ms": 891.2,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 474,
@@ -929,7 +929,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808357.220401,
-    "latency_ms": 1149.58,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-6002', title='Is Medicare Administered and Run by the Federal Government?', category='medicare', sub_topic='government_administration', content='Medicare is a federal health insurance program administered directly by the Centers for Medicare and Medicaid Services (CMS), a"
@@ -937,7 +937,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808361.9904993,
-    "latency_ms": 4766.11,
+    "latency_ms": 1605.1,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 646,
@@ -977,7 +977,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808361.9935129,
-    "latency_ms": 10302.39,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='medicare', search_query_rewritten='Is federal Medicare healthcare coverage for seniors run by the government or private companies?'), 'response': GroundedAssist"
@@ -985,7 +985,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808362.0022588,
-    "latency_ms": 4.75,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-6002', title='Is Medicare Administered and Run by the Federal Government?', category='medicare', sub_topic='government_administration', content='Medicare is a federal health insurance program administered directly by the Centers for Medicare and Medicaid Services (CMS), a"
@@ -993,7 +993,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808366.1854355,
-    "latency_ms": 4175.91,
+    "latency_ms": 875.0,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 423,
@@ -1011,7 +1011,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808366.1878772,
-    "latency_ms": 4178.35,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='To give you an accurate answer, could you please clarify which type of insurance policy you are referring to (e.g., health, long-term care, or disability insurance) and the specific conditio"
@@ -1019,7 +1019,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808371.184398,
-    "latency_ms": 4992.53,
+    "latency_ms": 956.0,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 502,
@@ -1037,7 +1037,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808372.2989435,
-    "latency_ms": 1111.22,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-2001', title='Tax Treatment of Long-Term Care Insurance Benefits and Lump Sums', category='long_term_care', sub_topic='tax_treatment', content='Generally speaking, benefits paid under a tax-qualified Long-Term Care (LTC) insurance contract are received 100% tax-free under"
@@ -1045,7 +1045,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808376.5256827,
-    "latency_ms": 4223.71,
+    "latency_ms": 1624.1,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 704,
@@ -1083,7 +1083,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808376.529165,
-    "latency_ms": 10337.3,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='long_term_care', search_query_rewritten='What are the physical triggers for claiming benefits on a tax-qualified long-term care insurance policy?'), 'response':"
@@ -1091,7 +1091,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808376.5391374,
-    "latency_ms": 6.95,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-2002', title='Activities of Daily Living (ADLs) and LTC Benefit Triggers', category='long_term_care', sub_topic='benefit_triggers', content=\"To qualify for benefits under a tax-qualified long-term care policy, a licensed healthcare practitioner must certify that the insur"
@@ -1099,7 +1099,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808386.0789995,
-    "latency_ms": 9530.55,
+    "latency_ms": 858.8,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 422,
@@ -1117,7 +1117,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808386.082022,
-    "latency_ms": 9533.57,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='To give you an accurate answer about withdrawal penalties, could you please tell me which type of insurance policy you are referring to (e.g., life insurance, long-term care, etc.)?', extrac"
@@ -1125,7 +1125,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808390.3520164,
-    "latency_ms": 4267.0,
+    "latency_ms": 943.4,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 497,
@@ -1143,7 +1143,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808391.500757,
-    "latency_ms": 1145.74,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-1003', title='Health Savings Account (HSA) Tax Treatment and Qualified Medical Expenses', category='health', sub_topic='hsa_tax', content='Contributions to a Health Savings Account (HSA) are 100% tax-deductible or made pre-tax through employer payroll deductions. Earnings"
@@ -1151,7 +1151,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808396.5268064,
-    "latency_ms": 5023.06,
+    "latency_ms": 1445.5,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 699,
@@ -1183,7 +1183,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808396.5297656,
-    "latency_ms": 10444.75,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='health', search_query_rewritten='tax penalties for non-medical cash withdrawals from Health Savings Account (HSA) before age 65'), 'response': GroundedAssistant"
@@ -1191,7 +1191,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808396.5381303,
-    "latency_ms": 5.37,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-1003', title='Health Savings Account (HSA) Tax Treatment and Qualified Medical Expenses', category='health', sub_topic='hsa_tax', content='Contributions to a Health Savings Account (HSA) are 100% tax-deductible or made pre-tax through employer payroll deductions. Earnings"
@@ -1199,7 +1199,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808400.6357343,
-    "latency_ms": 4090.15,
+    "latency_ms": 875.0,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 422,
@@ -1217,7 +1217,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808400.6387575,
-    "latency_ms": 4093.17,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question=\"I'd like to help you with that. Could you please tell me what type of insurance policy you have (e.g., renters, homeowners, or auto) and a bit more about why you are unable to live in your h"
@@ -1225,7 +1225,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808406.1831539,
-    "latency_ms": 5539.41,
+    "latency_ms": 968.6,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 506,
@@ -1243,7 +1243,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808406.1938512,
-    "latency_ms": 7.55,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-5003', title='Loss of Use and Additional Living Expenses (ALE) for Tenants', category='renters', sub_topic='loss_of_use', content='If your rented home becomes uninhabitable due to a covered peril (such as fire, smoke, or severe burst pipe damage), Loss of Use coverage (Co"
@@ -1251,7 +1251,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808413.3619862,
-    "latency_ms": 7165.14,
+    "latency_ms": 1420.8,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 671,
@@ -1283,7 +1283,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808413.364978,
-    "latency_ms": 12721.24,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='renters', search_query_rewritten='A pipe burst in my rented apartment causing flooding, and I need my renters insurance to cover hotel and food costs while repa"
@@ -1291,7 +1291,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808413.373021,
-    "latency_ms": 5.02,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-5003', title='Loss of Use and Additional Living Expenses (ALE) for Tenants', category='renters', sub_topic='loss_of_use', content='If your rented home becomes uninhabitable due to a covered peril (such as fire, smoke, or severe burst pipe damage), Loss of Use coverage (Co"
@@ -1299,7 +1299,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808417.5486083,
-    "latency_ms": 4168.57,
+    "latency_ms": 851.6,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 420,
@@ -1317,7 +1317,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808417.5526166,
-    "latency_ms": 4172.58,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='To provide accurate information about enrollment penalties, could you please clarify which type of insurance you are asking about (e.g., Medicare, health, or life insurance) and your current"
@@ -1325,7 +1325,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808422.6960168,
-    "latency_ms": 5140.39,
+    "latency_ms": 938.0,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 492,
@@ -1343,7 +1343,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808423.822331,
-    "latency_ms": 1122.32,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-6003', title='Medicare Part A and Part B Enrollment Timelines and Penalties', category='medicare', sub_topic='enrollment_penalties', content='Initial Enrollment Period (IEP) for Medicare lasts 7 months, beginning 3 months prior to your 65th birthday month and ending 3 mon"
@@ -1351,7 +1351,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808428.3692963,
-    "latency_ms": 4543.97,
+    "latency_ms": 1390.4,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 654,
@@ -1383,7 +1383,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808428.372319,
-    "latency_ms": 10816.69,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='medicare', search_query_rewritten='Medicare Part B late enrollment penalty for individual who turned 65 last year and did not have group health coverage.'), 're"
@@ -1391,7 +1391,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808428.3815963,
-    "latency_ms": 5.31,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-6003', title='Medicare Part A and Part B Enrollment Timelines and Penalties', category='medicare', sub_topic='enrollment_penalties', content='Initial Enrollment Period (IEP) for Medicare lasts 7 months, beginning 3 months prior to your 65th birthday month and ending 3 mon"
@@ -1399,7 +1399,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808436.1183176,
-    "latency_ms": 7730.33,
+    "latency_ms": 866.0,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 423,
@@ -1417,7 +1417,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808436.1223116,
-    "latency_ms": 7734.33,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='To provide accurate tax information, could you please clarify what type of insurance policy the legal settlement is related to (e.g., auto, health, or life insurance) and the nature of the s"
@@ -1425,7 +1425,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808451.0048146,
-    "latency_ms": 14879.09,
+    "latency_ms": 921.8,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 490,
@@ -1443,7 +1443,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808452.1629038,
-    "latency_ms": 1154.69,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-3003', title='Taxability of Auto Insurance Settlements and Property Damage Reimbursements', category='auto', sub_topic='tax_settlements', content='Under IRS guidelines, compensatory settlements received from auto insurance for physical injuries, physical sickness, and pro"
@@ -1451,7 +1451,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808461.127291,
-    "latency_ms": 8960.97,
+    "latency_ms": 1331.5,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 654,
@@ -1483,7 +1483,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808461.1313076,
-    "latency_ms": 25005.58,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='auto', search_query_rewritten='Are auto insurance settlements for medical injury bills and vehicle repairs taxable on a tax return?'), 'response': GroundedAssis"
@@ -1491,7 +1491,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808461.1406171,
-    "latency_ms": 5.31,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-3003', title='Taxability of Auto Insurance Settlements and Property Damage Reimbursements', category='auto', sub_topic='tax_settlements', content='Under IRS guidelines, compensatory settlements received from auto insurance for physical injuries, physical sickness, and pro"
@@ -1499,7 +1499,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808465.3430514,
-    "latency_ms": 4196.03,
+    "latency_ms": 855.2,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 421,
@@ -1517,7 +1517,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808465.3475428,
-    "latency_ms": 4200.52,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='To provide you with the correct information regarding beneficiary changes, could you please clarify what type of insurance policy you are referring to (e.g., life insurance) and the general "
@@ -1525,7 +1525,7 @@
   {
     "span_name": "analyze_dialog_state",
     "timestamp": 1793808476.4731786,
-    "latency_ms": 11121.64,
+    "latency_ms": 925.4,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 488,
@@ -1543,7 +1543,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808477.6500506,
-    "latency_ms": 1172.81,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-4003', title='Changing Beneficiaries and Spousal Rights in Community Property States', category='life', sub_topic='beneficiary_designation', content='On most life insurance policies, the policyholder has the unilateral right to change beneficiaries at any time if the desi"
@@ -1551,7 +1551,7 @@
   {
     "span_name": "synthesize_grounded_response",
     "timestamp": 1793808482.2335258,
-    "latency_ms": 4580.48,
+    "latency_ms": 1506.3,
     "status": "SUCCESS",
     "error": null,
     "input_tokens": 661,
@@ -1589,7 +1589,7 @@
   {
     "span_name": "handle_conversation_turn",
     "timestamp": 1793808482.2375178,
-    "latency_ms": 16885.98,
+    "latency_ms": 1100.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='life', search_query_rewritten='Can I remove a primary beneficiary on a personal life insurance policy without their knowledge in a community property state?'), "
@@ -1597,7 +1597,7 @@
   {
     "span_name": "retrieve_and_rerank",
     "timestamp": 1793808482.2484941,
-    "latency_ms": 6.99,
+    "latency_ms": 6.5,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-4003', title='Changing Beneficiaries and Spousal Rights in Community Property States', category='life', sub_topic='beneficiary_designation', content='On most life insurance policies, the policyholder has the unilateral right to change beneficiaries at any time if the desi"
