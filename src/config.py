@@ -92,15 +92,18 @@ class AppConfig:
             self.api_key = openai_key
             self.base_url = None
             self.chat_model = os.getenv("CHAT_MODEL", "gpt-4o-mini")
-            self.fallback_models = ["gpt-4o-mini"]
+            default_fallbacks = ["gpt-4o-mini", "gpt-4o"]
             self.embedding_model = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
         else:
             self.provider = "gemini_compatibility"
             self.api_key = gemini_key or os.getenv("GEMINI_API_KEY", "")
             self.base_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
             self.chat_model = os.getenv("CHAT_MODEL", "gemini-2.5-flash-lite")
-            self.fallback_models = ["gemini-2.5-flash-lite", "gemini-2.5-flash"]
+            default_fallbacks = ["gemini-2.5-flash-lite", "gemini-2.5-flash"]
             self.embedding_model = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
+
+        # Ensure chat_model is always the primary model tried, deduplicated with failovers
+        self.fallback_models = [self.chat_model] + [m for m in default_fallbacks if m != self.chat_model]
 
         client_key = self.api_key if self.api_key else "placeholder_key_for_offline_mode"
         if self.base_url:

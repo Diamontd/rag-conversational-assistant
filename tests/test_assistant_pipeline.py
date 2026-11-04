@@ -5,24 +5,16 @@ Verifies Clarification Gate, Metadata Filtering, Grounded Checklist Citations, a
 
 import os
 import pytest
-try:
-    from src.schemas import (
-        ChatMessage,
-        ConversationTurnDecision,
-        GroundedAssistantResponse
-    )
-    from src.config import config, trace_collector
-    from src.knowledge_base import knowledge_base, CORPUS_DOCUMENTS
-    from src.assistant import assistant
-except ModuleNotFoundError:
-    from src.schemas import (
-        ChatMessage,
-        ConversationTurnDecision,
-        GroundedAssistantResponse
-    )
-    from src.config import config, trace_collector
-    from src.knowledge_base import knowledge_base, CORPUS_DOCUMENTS
-    from src.assistant import assistant
+from src.schemas import (
+    ChatMessage,
+    ConversationTurnDecision,
+    GroundedAssistantResponse,
+    ScoredDocument
+)
+from src.config import config, trace_collector, LocalTraceCollector
+from src.knowledge_base import knowledge_base, CORPUS_DOCUMENTS
+from src.assistant import assistant
+from src.eval_harness import calculate_category_precision
 
 
 def test_knowledge_base_corpus_integrity():
@@ -92,10 +84,7 @@ def test_multi_turn_resolution_and_grounded_response():
 
 def test_trace_collector_logging(tmp_path):
     """Verify trace spans are recorded locally without raising network errors or mutating artifacts."""
-    try:
-        from src.config import LocalTraceCollector
-    except ModuleNotFoundError:
-        from src.config import LocalTraceCollector
+    # LocalTraceCollector imported from src.config
 
     test_trace_file = str(tmp_path / "test_traces.json")
     collector = LocalTraceCollector(trace_file_path=test_trace_file)
@@ -110,12 +99,7 @@ def test_trace_collector_logging(tmp_path):
 
 def test_category_precision_metric():
     """Verify category precision accurately measures context purity and handles edge cases."""
-    try:
-        from src.eval_harness import calculate_category_precision
-        from src.schemas import ScoredDocument
-    except ModuleNotFoundError:
-        from src.eval_harness import calculate_category_precision
-        from src.schemas import ScoredDocument
+    # calculate_category_precision and ScoredDocument imported at top
 
     # 1. Live vector index retrieval test
     docs_filtered = knowledge_base.retrieve(
