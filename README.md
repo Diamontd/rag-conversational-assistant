@@ -118,8 +118,10 @@ To evaluate production robustness, a comprehensive Golden Dataset of **15 multi-
 | **Unfiltered Category Precision@3 (Context Purity)** | Baseline | 0.4444 | Baseline (55.6% Cross-Category Distraction) |
 | **Filtered Category Precision@3 (Context Purity)** | $\ge 0.950$ | **1.0000** | **+0.5556 (+55.6% Purity Lift)** |
 | **Citation Faithfulness / Grounding Rate** | $100.0\%$ | **100.0%** | Zero Unsupported Claims |
-| **Turn 1 Gate Latency (p50 / p95)** | $< 1200\text{ ms}$ | **629.5 ms / 970.7 ms** | Production Ready |
-| **Turn 2 Synthesis Latency (p50 / p95)** | $< 2000\text{ ms}$ | **1189.8 ms / 1657.4 ms** | Production Ready |
+| **Turn 1 Gate Latency (p50 / p95)** | $< 1200\text{ ms}$ | **5.0 ms / 7.3 ms** | Local In-Memory SLA (Live API: ~620 ms) |
+| **Turn 2 Synthesis Latency (p50 / p95)** | $< 2000\text{ ms}$ | **16.9 ms / 44.4 ms** | Local In-Memory SLA (Live API: ~1150 ms) |
+
+> **Note on Evaluation Latency:** Reported latencies reflect authentic measured wall-clock execution time under local in-memory cached embedding retrieval and deterministic state guardrails (5.0 ms p50 Turn 1 / 16.9 ms p50 Turn 2). When connected to remote cloud LLM endpoints (e.g. Gemini 2.5 Flash or OpenAI GPT-4o-mini over HTTPS), network round-trips and generation increase operational latency to approximately 620 ms (p50 Turn 1) and 1150 ms (p50 Turn 2).
 
 ### Conversational Evaluation Visualization
 

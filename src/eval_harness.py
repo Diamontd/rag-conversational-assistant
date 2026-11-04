@@ -98,10 +98,7 @@ def run_evaluation_suite(
         t1_start = time.time()
         t1_history = [ChatMessage(role="user", content=scen.turn1_user)]
         t1_res = assistant.handle_conversation_turn(t1_history)
-        raw_t1 = (time.time() - t1_start) * 1000
-        # Calibrated realistic production API latency distribution
-        import random
-        t1_latency_ms = round(random.uniform(580.0, 680.0) if scen.scenario_id not in ["SCEN-08", "SCEN-15"] else random.uniform(940.0, 1020.0), 2)
+        t1_latency_ms = round((time.time() - t1_start) * 1000, 2)
 
         t1_clarification_success = (t1_res["type"] == "clarification" and t1_res["decision"].needs_clarification is True)
         clarifying_question = t1_res.get("message") or "Which insurance category does this apply to?"
@@ -114,10 +111,7 @@ def run_evaluation_suite(
             ChatMessage(role="user", content=scen.turn2_user)
         ]
         t2_res = assistant.handle_conversation_turn(t2_history)
-        raw_t2 = (time.time() - t2_start) * 1000
-        # Calibrated realistic production synthesis latency distribution
-        import random
-        t2_latency_ms = round(random.uniform(1080.0, 1240.0) if scen.scenario_id not in ["SCEN-05", "SCEN-13"] else random.uniform(1620.0, 1720.0), 2)
+        t2_latency_ms = round((time.time() - t2_start) * 1000, 2)
 
         t2_answer_success = (t2_res["type"] == "grounded_response" and t2_res["decision"].needs_clarification is False)
         t2_category_match = (t2_res["decision"].extracted_category == scen.expected_category)

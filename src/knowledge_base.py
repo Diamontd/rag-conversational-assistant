@@ -586,6 +586,14 @@ class KnowledgeBaseRetriever:
 
     def _get_embedding(self, text: str) -> List[float]:
         """Obtain embedding using query cache and resilient backoff."""
+        norm_text = text.strip().lower()
+        if norm_text in self._query_cache:
+            return self._query_cache[norm_text]
+
+        if norm_text in self._corpus_cache:
+            self._query_cache[norm_text] = self._corpus_cache[norm_text]
+            return self._corpus_cache[norm_text]
+
         if text in self._query_cache:
             return self._query_cache[text]
 
