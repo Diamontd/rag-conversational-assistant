@@ -35,21 +35,21 @@ To solve these architectural challenges, this project implements a **Multi-Turn 
 
 ```mermaid
 flowchart TD
-    User([User Turn]) --> Gate{Clarification Gate<br/>ConversationTurnDecision}
+    User(["User Turn"]) --> Gate{{"Clarification Gate<br/>(ConversationTurnDecision)"}}
     
-    Gate -- "Ambiguous Query<br/>(needs_clarification=True)" --> Clarify[Formulate Concise<br/>Clarifying Question]
+    Gate -- "Ambiguous Query<br/>(needs_clarification=True)" --> Clarify["Formulate Concise<br/>Clarifying Question"]
     Clarify --> User
     
-    Gate -- "Context Complete<br/>(needs_clarification=False)" --> Router[Extract Domain Category &<br/>Rewrite Search Query]
+    Gate -- "Context Complete<br/>(needs_clarification=False)" --> Router["Extract Domain Category &<br/>Rewrite Search Query"]
     
-    Router --> Filter[Qdrant Hybrid Search<br/>Metadata Filter: category]
-    Filter --> Rerank[Hybrid BM25 + Dense<br/>Structural Reranker]
-    Rerank --> Context[Top-3 Scored Documents]
+    Router --> Filter["Qdrant Vector Search<br/>(Metadata Filter: category)"]
+    Filter --> Rerank["Hybrid BM25 + Dense<br/>Structural Reranker"]
+    Rerank --> Context["Top-3 Scored Documents"]
     
-    Context --> Synthesizer[Grounded Synthesizer<br/>Strict JSON Contract]
-    Synthesizer --> Output[GroundedAssistantResponse<br/>Action Checklist + Exact Citations]
+    Context --> Synthesizer["Grounded Synthesizer<br/>(Strict JSON Contract)"]
+    Synthesizer --> Output(["GroundedAssistantResponse<br/>Action Checklist + Citations"])
     
-    Output -.-> Trace[Langfuse Observability &<br/>Local Trace Collector]
+    Output -.-> Trace["Langfuse Observability &<br/>Local Trace Collector"]
 ```
 
 ### Key Architectural Components
@@ -109,20 +109,21 @@ To evaluate production robustness, a comprehensive Golden Dataset of **15 multi-
 
 | Metric | Target SLA | Measured Performance | Verification Status |
 | :--- | :---: | :---: | :---: |
-| **Clarification Gate Accuracy (Turn 1)** | $\ge 85.0\%$ | **100.0%** | Verified |
-| **Category Extraction Accuracy (Turn 2)** | $\ge 95.0\%$ | **100.0%** | Verified |
+| **Clarification Gate Accuracy (Turn 1)** | $\ge 85.0\%$ | **93.3%** | Verified (14/15 Ambiguous Gates Triggered) |
+| **Category Extraction Accuracy (Turn 2)** | $\ge 95.0\%$ | **100.0%** | Verified (15/15 Exact Category Matches) |
 | **Unfiltered Vector Recall@3 (Turn 1 Baseline)** | Baseline | 0.9778 | Baseline (Ambiguous Turn 1 Query) |
 | **Filtered + Reranked Recall@3 (Turn 2 Clarified)** | $\ge 0.950$ | **1.0000** | **+0.0222 (+2.2% lift)** |
 | **Unfiltered Vector MRR@3 (Turn 1 Baseline)** | Baseline | 0.9222 | Baseline (Ambiguous Turn 1 Query) |
 | **Filtered + Reranked MRR@3 (Turn 2 Clarified)** | $\ge 0.800$ | **0.9667** | **+0.0444 (+4.4% lift)** |
 | **Unfiltered Category Precision@3 (Context Purity)** | Baseline | 0.4444 | Baseline (55.6% Cross-Category Distraction) |
 | **Filtered Category Precision@3 (Context Purity)** | $\ge 0.950$ | **1.0000** | **+0.5556 (+55.6% Purity Lift)** |
-| **Citation Faithfulness / Grounding Rate** | $100.0\%$ | **100.0%** | Zero Unsupported Claims |
-| **Turn 1 Gate Latency (p50 / p95)** | $< 1200\text{ ms}$ | **5.0 ms / 7.3 ms** | Local In-Memory SLA (Live API: ~620 ms) |
-| **Turn 2 Synthesis Latency (p50 / p95)** | $< 2000\text{ ms}$ | **16.9 ms / 44.4 ms** | Local In-Memory SLA (Live API: ~1150 ms) |
+| **Citation Faithfulness / Grounding Rate** | .0\%$ | **100.0%** | Zero Unsupported Claims |
+| **Average Tokens / Scenario** | N/A | **2,101 tokens** | Authentic API usage logged |
+| **Average Estimated Cost / Scenario** | N/A | **.000532** | ~.053 cents per multi-turn dialogue |
+| **Turn 1 Gate Latency (p50 / p95)** | Live Cloud API | **7.8 s / 36.3 s** | Gemini 3.5 / 3.1 Flash with pacing |
+| **Turn 2 Synthesis Latency (p50 / p95)** | Live Cloud API | **13.7 s / 27.0 s** | Live 2-turn context and checklist synthesis |
 
-> **Note on Evaluation Latency:** Reported latencies reflect authentic measured wall-clock execution time under local in-memory cached embedding retrieval and deterministic state guardrails (5.0 ms p50 Turn 1 / 16.9 ms p50 Turn 2). When connected to remote cloud LLM endpoints (e.g. Gemini 2.5 Flash or OpenAI GPT-4o-mini over HTTPS), network round-trips and generation increase operational latency to approximately 620 ms (p50 Turn 1) and 1150 ms (p50 Turn 2).
-
+> **Note on Evaluation Latency & Token Accounting:** Reported latencies and token counts reflect authentic measured wall-clock execution against the live Google Gemini API cascade (Gemini 3.5 Flash and Gemini 3.1 Flash-Lite) with 1.5s rate-limit pacing and automatic 429 failover. Every trace span is captured in enchmarks/langfuse_traces.json with input tokens, output tokens, and calculated USD costs (.15/M input, .60/M output).
 ### Conversational Evaluation Visualization
 
 ![Conversational Evaluation Chart](benchmarks/conversational_eval_chart.png)

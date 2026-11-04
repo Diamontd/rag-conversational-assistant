@@ -75,6 +75,9 @@ def run_evaluation_suite(
     scenarios = [GoldenEvalScenario(**s) for s in raw_scenarios]
     print(f"Loaded {len(scenarios)} Golden Dataset evaluation scenarios.")
 
+    if force_rerun:
+        trace_collector.clear()
+
     # Check for existing completed scenarios unless force_rerun is True
     results_records: List[Dict[str, Any]] = []
     completed_ids = set()
@@ -93,6 +96,7 @@ def run_evaluation_suite(
             continue
 
         print(f"[{idx}/{len(scenarios)}] Evaluating {scen.scenario_id}: {scen.title}...")
+        start_trace_idx = len(trace_collector.traces)
 
         # TURN 1: Ambiguous Query -> Must trigger Clarification Gate
         t1_start = time.time()
@@ -166,7 +170,9 @@ def run_evaluation_suite(
             "valid_citations_count": valid_citations,
             "t1_latency_ms": t1_latency_ms,
             "t2_latency_ms": t2_latency_ms,
-            "total_latency_ms": round(t1_latency_ms + t2_latency_ms, 2)
+            "total_latency_ms": round(t1_latency_ms + t2_latency_ms, 2),
+            "total_tokens": sum(t.get("total_tokens", 0) for t in trace_collector.traces[start_trace_idx:]),
+            "estimated_cost_usd": round(sum(t.get("estimated_cost_usd", 0.0) for t in trace_collector.traces[start_trace_idx:]), 6)
         })
 
         # Save progressive CSV snapshot
@@ -194,6 +200,10 @@ def run_evaluation_suite(
     print(f"Citation Faithfulness Rate:    {df['citation_faithfulness_pct'].mean():.1f}%")
     print(f"Latency Turn 1 (p50 / p95):    {df['t1_latency_ms'].quantile(0.5):.1f} ms / {df['t1_latency_ms'].quantile(0.95):.1f} ms")
     print(f"Latency Turn 2 (p50 / p95):    {df['t2_latency_ms'].quantile(0.5):.1f} ms / {df['t2_latency_ms'].quantile(0.95):.1f} ms")
+    avg_tokens = df["total_tokens"].mean() if "total_tokens" in df else 0
+    avg_cost = df["estimated_cost_usd"].mean() if "estimated_cost_usd" in df else 0
+    print(f"Average Tokens / Scenario:     {avg_tokens:.1f}")
+    print(f"Average Est. Cost / Scenario:  ${avg_cost:.6f}")
     print("=" * 60)
 
     # Persist Langfuse trace spans

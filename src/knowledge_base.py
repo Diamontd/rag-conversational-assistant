@@ -601,7 +601,7 @@ class KnowledgeBaseRetriever:
             self._query_cache[text] = self._corpus_cache[text]
             return self._corpus_cache[text]
 
-        if config.api_key:
+        if config.api_key and config.api_key != "placeholder_key_for_offline_mode":
             for attempt in range(3):
                 try:
                     res = config.client.embeddings.create(
@@ -609,7 +609,17 @@ class KnowledgeBaseRetriever:
                         input=text
                     )
                     vec = res.data[0].embedding
+                    self._query_cache[norm_text] = vec
                     self._query_cache[text] = vec
+                    self._corpus_cache[norm_text] = vec
+                    self._corpus_cache[text] = vec
+                    try:
+                        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                        cache_file = os.path.join(base_dir, "data", "corpus_embeddings.json")
+                        with open(cache_file, "w", encoding="utf-8") as cf:
+                            json.dump(self._corpus_cache, cf)
+                    except Exception as ce:
+                        logger.debug(f"Could not persist embedding cache: {ce}")
                     return vec
                 except Exception as e:
                     if "429" in str(e) or "quota" in str(e).lower() or "rate" in str(e).lower():

@@ -33,10 +33,10 @@ CATEGORY_PATTERNS = [
 
 
 def _call_llm_with_retry(messages: List[Dict[str, str]], max_retries: int = 2) -> Optional[str]:
-    """Execute LLM chat completion with model failover and configurable pacing."""
+    """Execute LLM chat completion with model failover, usage recording, and configurable pacing."""
     if not config.api_key or config.api_key == "placeholder_key_for_offline_mode":
         return None
-    rate_limit_delay = float(os.getenv("RATE_LIMIT_DELAY_S", "0.0"))
+    rate_limit_delay = float(os.getenv("RATE_LIMIT_DELAY_S", "1.5"))
     for model_name in config.fallback_models:
         for attempt in range(max_retries):
             try:
@@ -46,13 +46,24 @@ def _call_llm_with_retry(messages: List[Dict[str, str]], max_retries: int = 2) -
                     response_format={"type": "json_object"},
                     temperature=0.0
                 )
+                usage = getattr(response, "usage", None)
+                prompt_tokens = (getattr(usage, "prompt_tokens", 0) or 0) if usage else 0
+                completion_tokens = (getattr(usage, "completion_tokens", 0) or 0) if usage else 0
+                estimated_cost_usd = round((prompt_tokens * 0.00000015) + (completion_tokens * 0.00000060), 6)
+                trace_collector.record_llm_usage(
+                    prompt_tokens=prompt_tokens,
+                    completion_tokens=completion_tokens,
+                    model_name=model_name,
+                    estimated_cost_usd=estimated_cost_usd
+                )
                 if rate_limit_delay > 0.0:
                     time.sleep(rate_limit_delay)
-                return response.choices[0].message.content.strip()
+                content = response.choices[0].message.content
+                return content.strip() if content else None
             except Exception as e:
                 err_str = str(e).lower()
-                if "429" in err_str or "quota" in err_str:
-                    logger.debug(f"Model {model_name} quota exceeded, checking next...")
+                if "429" in err_str or "quota" in err_str or "503" in err_str:
+                    logger.warning(f"Model {model_name} rate limit or 503 ({e}), switching to next in cascade...")
                     break
                 time.sleep(1.0)
     return None
@@ -141,7 +152,7 @@ Respond ONLY with a valid JSON object matching this exact schema:
             needs_clarification=False,
             clarifying_question=None,
             extracted_category=detected_cat,
-            search_query_rewritten=latest_user_text
+            search_query_rewritten=combined_user_text
         )
 
     @observe("synthesize_grounded_response")
@@ -207,11 +218,13 @@ Output ONLY valid JSON matching this schema:
         cited_ids = [d.doc_id for d in retrieved_docs]
         checklist = []
         for i, doc in enumerate(retrieved_docs, start=1):
+            sentences = [s.strip() for s in re.split(r'(?<=[.!?])\s+', doc.content) if s.strip()]
+            summary_sentences = " ".join(sentences[:2]) if len(sentences) >= 2 else (sentences[0] if sentences else doc.content)
             checklist.append(
                 ActionChecklistItem(
                     step_number=i,
                     action_title=f"Review Policy Guidelines for {doc.title}",
-                    detailed_instruction=f"According to verified documentation [{doc.doc_id}], {doc.content[:180]}...",
+                    detailed_instruction=f"According to verified documentation [{doc.doc_id}], {summary_sentences}",
                     source_id=doc.doc_id
                 )
             )

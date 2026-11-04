@@ -30,6 +30,21 @@ class LocalTraceCollector:
         self.trace_file_path = trace_file_path
         self.traces: List[Dict[str, Any]] = []
         self._lock = threading.Lock()
+        self._local = threading.local()
+
+    def record_llm_usage(self, prompt_tokens: int, completion_tokens: int, model_name: str, estimated_cost_usd: float) -> None:
+        self._local.last_usage = {
+            "input_tokens": prompt_tokens,
+            "output_tokens": completion_tokens,
+            "total_tokens": prompt_tokens + completion_tokens,
+            "estimated_cost_usd": estimated_cost_usd,
+            "model": model_name
+        }
+
+    def pop_last_usage(self) -> Optional[Dict[str, Any]]:
+        usage = getattr(self._local, "last_usage", None)
+        self._local.last_usage = None
+        return usage
 
     def record_trace(self, trace_data: Dict[str, Any]) -> None:
         with self._lock:
@@ -98,8 +113,8 @@ class AppConfig:
             self.provider = "gemini_compatibility"
             self.api_key = gemini_key or os.getenv("GEMINI_API_KEY", "")
             self.base_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
-            self.chat_model = os.getenv("CHAT_MODEL", "gemini-2.5-flash-lite")
-            default_fallbacks = ["gemini-2.5-flash-lite", "gemini-2.5-flash"]
+            self.chat_model = os.getenv("CHAT_MODEL", "gemini-3.5-flash")
+            default_fallbacks = ["gemini-3.5-flash", "gemini-3.1-flash-lite", "gemini-2.5-flash", "gemini-2.5-flash-lite"]
             self.embedding_model = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
 
         # Ensure chat_model is always the primary model tried, deduplicated with failovers
@@ -107,9 +122,9 @@ class AppConfig:
 
         client_key = self.api_key if self.api_key else "placeholder_key_for_offline_mode"
         if self.base_url:
-            self.client = OpenAI(api_key=client_key, base_url=self.base_url)
+            self.client = OpenAI(api_key=client_key, base_url=self.base_url, timeout=25.0)
         else:
-            self.client = OpenAI(api_key=client_key)
+            self.client = OpenAI(api_key=client_key, timeout=25.0)
 
         # Langfuse Observability Configuration
         self.langfuse_public_key = os.getenv("LANGFUSE_PUBLIC_KEY")
@@ -174,6 +189,9 @@ def observe(name: Optional[str] = None):
                     "status": "ERROR" if error else "SUCCESS",
                     "error": error,
                 }
+                usage = trace_collector.pop_last_usage()
+                if usage:
+                    span_record.update(usage)
                 if hasattr(result, "model_dump"):
                     try:
                         span_record["output"] = result.model_dump(mode="json")
