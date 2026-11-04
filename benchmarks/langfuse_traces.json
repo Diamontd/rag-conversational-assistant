@@ -1,8 +1,8 @@
 [
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801014.1211624,
-    "latency_ms": 4281.79,
+    "timestamp": 1793803055.6728184,
+    "latency_ms": 1.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -14,37 +14,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801014.1221423,
-    "latency_ms": 4282.77,
+    "timestamp": 1793803055.6737988,
+    "latency_ms": 1.98,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='can i d"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801018.2421331,
-    "latency_ms": 4119.01,
+    "timestamp": 1793803055.6747832,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "health",
-      "search_query_rewritten": "can i drop my spouse from my policy right now? it is an employer health insurance policy, we are not legally divorced, and open enrollment is closed."
+      "search_query_rewritten": "it is an employer health insurance policy, we are not legally divorced, and open enrollment is closed."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801018.343289,
-    "latency_ms": 100.29,
+    "timestamp": 1793803055.7696583,
+    "latency_ms": 93.87,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-1001', title='Dropping a Spouse from Employer Health Insurance Outside Open Enrollment', category='health', sub_topic='spouse_removal', content='Can you drop your spouse from your health insurance policy? The answer strictly depends on employer plan rules and state regula"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801022.4684703,
-    "latency_ms": 4123.22,
+    "timestamp": 1793803055.770656,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -64,38 +64,38 @@
         },
         {
           "step_number": 3,
-          "action_title": "Review Policy Guidelines for Tax Deductibility of Health Insurance Premiums and Flexible Spending Accounts",
-          "detailed_instruction": "According to verified documentation [DOC-1005], Are insurance benefits and premiums taxed? Under IRS guidelines, health insurance employer subsidies are exempt from gross income. Health benefits paid directly to healthcare provi...",
-          "source_id": "DOC-1005"
+          "action_title": "Review Policy Guidelines for COBRA Continuation Coverage Following Spousal Dropping",
+          "detailed_instruction": "According to verified documentation [DOC-1004], When a spouse loses employer health coverage due to divorce or legal separation, they qualify for federal COBRA continuation coverage for up to 36 months. The employee or spouse mu...",
+          "source_id": "DOC-1004"
         }
       ],
       "cited_source_ids": [
         "DOC-1001",
         "DOC-1002",
-        "DOC-1005"
+        "DOC-1004"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801022.4694436,
-    "latency_ms": 8346.32,
+    "timestamp": 1793803055.7716224,
+    "latency_ms": 96.84,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='health', search_query_rewritten='can i drop my spouse from my policy right now? it is an employer health insurance policy, we are not legally divorced, and open"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='health', search_query_rewritten='it is an employer health insurance policy, we are not legally divorced, and open enrollment is closed.'), 'response': GroundedA"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801022.4764214,
-    "latency_ms": 5.98,
+    "timestamp": 1793803055.778289,
+    "latency_ms": 5.5,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-3003', title='Taxability of Auto Insurance Settlements and Property Damage Reimbursements', category='auto', sub_topic='tax_settlements', content='Under IRS guidelines, compensatory settlements received from auto insurance for physical injuries, physical sickness, and pro"
+    "output_summary": "[ScoredDocument(doc_id='DOC-3002', title='Removing a Spouse or Driver from Auto Insurance Policies', category='auto', sub_topic='spouse_driver_removal', content='To remove a spouse or resident driver from an auto insurance policy, insurers require verification that the individual is no longer operat"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801026.6055071,
-    "latency_ms": 4113.79,
+    "timestamp": 1793803055.783295,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -107,37 +107,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801026.6070085,
-    "latency_ms": 4115.29,
+    "timestamp": 1793803055.7842793,
+    "latency_ms": 0.98,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='are my "
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801030.7169857,
-    "latency_ms": 4108.97,
+    "timestamp": 1793803055.7852626,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "long_term_care",
-      "search_query_rewritten": "are my insurance benefits taxed? i am receiving per-diem benefits from my tax-qualified long-term care insurance policy."
+      "search_query_rewritten": "i am receiving per-diem benefits from my tax-qualified long-term care insurance policy."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801030.7249637,
-    "latency_ms": 6.98,
+    "timestamp": 1793803055.7926967,
+    "latency_ms": 6.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-2001', title='Tax Treatment of Long-Term Care Insurance Benefits and Lump Sums', category='long_term_care', sub_topic='tax_treatment', content='Generally speaking, benefits paid under a tax-qualified Long-Term Care (LTC) insurance contract are received 100% tax-free under"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801034.8358736,
-    "latency_ms": 4109.47,
+    "timestamp": 1793803055.7946742,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -171,24 +171,24 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801034.8368652,
-    "latency_ms": 8228.85,
+    "timestamp": 1793803055.7956722,
+    "latency_ms": 10.41,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='long_term_care', search_query_rewritten='are my insurance benefits taxed? i am receiving per-diem benefits from my tax-qualified long-term care insurance policy"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='long_term_care', search_query_rewritten='i am receiving per-diem benefits from my tax-qualified long-term care insurance policy.'), 'response': GroundedAssistan"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801034.8458314,
-    "latency_ms": 6.99,
+    "timestamp": 1793803055.8016548,
+    "latency_ms": 3.95,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-4005', title='Where to Buy Term Life vs Universal Life Insurance', category='life', sub_topic='where_to_buy_term', content='Where should I go to buy a policy? For term life and universal life policies, consumers can purchase through independent life insurance brokerage fi"
+    "output_summary": "[ScoredDocument(doc_id='DOC-2001', title='Tax Treatment of Long-Term Care Insurance Benefits and Lump Sums', category='long_term_care', sub_topic='tax_treatment', content='Generally speaking, benefits paid under a tax-qualified Long-Term Care (LTC) insurance contract are received 100% tax-free under"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801038.9711087,
-    "latency_ms": 4120.27,
+    "timestamp": 1793803055.805643,
+    "latency_ms": 0.97,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -200,37 +200,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801038.9720092,
-    "latency_ms": 4121.17,
+    "timestamp": 1793803055.8066926,
+    "latency_ms": 2.02,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='what do"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801043.09194,
-    "latency_ms": 4118.96,
+    "timestamp": 1793803055.8081214,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "auto",
-      "search_query_rewritten": "what do the numbers on my insurance card mean? on my auto insurance declaration page it lists liability limits like 100/300/100."
+      "search_query_rewritten": "on my auto insurance declaration page it lists liability limits like 100/300/100."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801043.10095,
-    "latency_ms": 8.0,
+    "timestamp": 1793803055.8157153,
+    "latency_ms": 6.6,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-3001', title='Understanding Split Liability Limits in Auto Insurance Policies', category='auto', sub_topic='split_limits', content='Split limits refer to the bodily injury and property damage liability portion of an auto insurance policy broken down into three distinct nu"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801047.2199318,
-    "latency_ms": 4117.98,
+    "timestamp": 1793803055.8166807,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -244,44 +244,44 @@
         },
         {
           "step_number": 2,
-          "action_title": "Review Policy Guidelines for Dropping a Spouse or Permissive Driver from Auto Policy Declaration",
-          "detailed_instruction": "According to verified documentation [DOC-3006], Can I drop my spouse from my insurance policy right now? If you want to drop your spouse from a personal auto insurance policy, you must provide proof of separate auto insurance or...",
-          "source_id": "DOC-3006"
-        },
-        {
-          "step_number": 3,
           "action_title": "Review Policy Guidelines for Taxability of Auto Insurance Settlements and Property Damage Reimbursements",
           "detailed_instruction": "According to verified documentation [DOC-3003], Under IRS guidelines, compensatory settlements received from auto insurance for physical injuries, physical sickness, and property damage repairs are non-taxable. However, settleme...",
           "source_id": "DOC-3003"
+        },
+        {
+          "step_number": 3,
+          "action_title": "Review Policy Guidelines for Removing a Spouse or Driver from Auto Insurance Policies",
+          "detailed_instruction": "According to verified documentation [DOC-3002], To remove a spouse or resident driver from an auto insurance policy, insurers require verification that the individual is no longer operating the insured vehicles. Accepted proof i...",
+          "source_id": "DOC-3002"
         }
       ],
       "cited_source_ids": [
         "DOC-3001",
-        "DOC-3006",
-        "DOC-3003"
+        "DOC-3003",
+        "DOC-3002"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801047.2209003,
-    "latency_ms": 8247.92,
+    "timestamp": 1793803055.8176787,
+    "latency_ms": 9.56,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='auto', search_query_rewritten='what do the numbers on my insurance card mean? on my auto insurance declaration page it lists liability limits like 100/300/100.'"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='auto', search_query_rewritten='on my auto insurance declaration page it lists liability limits like 100/300/100.'), 'response': GroundedAssistantResponse(situat"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801047.2282515,
-    "latency_ms": 5.36,
+    "timestamp": 1793803055.8246598,
+    "latency_ms": 5.95,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-4006', title='Removing an Ex-Spouse as Beneficiary on Life Insurance After Separation', category='life', sub_topic='spousal_beneficiary_removal', content='How do I take someone off my insurance after separation? In life insurance, removing a former spouse requires submitt"
+    "output_summary": "[ScoredDocument(doc_id='DOC-3001', title='Understanding Split Liability Limits in Auto Insurance Policies', category='auto', sub_topic='split_limits', content='Split limits refer to the bodily injury and property damage liability portion of an auto insurance policy broken down into three distinct nu"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801051.3508072,
-    "latency_ms": 4117.55,
+    "timestamp": 1793803055.8296473,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -293,37 +293,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801051.3517735,
-    "latency_ms": 4118.52,
+    "timestamp": 1793803055.830679,
+    "latency_ms": 1.03,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='how do "
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801055.4936166,
-    "latency_ms": 4139.85,
+    "timestamp": 1793803055.832667,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "auto",
-      "search_query_rewritten": "how do i take someone off my insurance after separation? i need to remove my separated spouse from my personal auto insurance policy so i am not paying for their driving."
+      "search_query_rewritten": "i need to remove my separated spouse from my personal auto insurance policy so i am not paying for their driving."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801055.5025954,
-    "latency_ms": 7.98,
+    "timestamp": 1793803055.839322,
+    "latency_ms": 5.65,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-3006', title='Dropping a Spouse or Permissive Driver from Auto Policy Declaration', category='auto', sub_topic='auto_spouse', content='Can I drop my spouse from my insurance policy right now? If you want to drop your spouse from a personal auto insurance policy, you must "
+    "output_summary": "[ScoredDocument(doc_id='DOC-3002', title='Removing a Spouse or Driver from Auto Insurance Policies', category='auto', sub_topic='spouse_driver_removal', content='To remove a spouse or resident driver from an auto insurance policy, insurers require verification that the individual is no longer operat"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801059.620656,
-    "latency_ms": 4117.06,
+    "timestamp": 1793803055.8403192,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -331,50 +331,50 @@
       "action_checklist": [
         {
           "step_number": 1,
-          "action_title": "Review Policy Guidelines for Dropping a Spouse or Permissive Driver from Auto Policy Declaration",
-          "detailed_instruction": "According to verified documentation [DOC-3006], Can I drop my spouse from my insurance policy right now? If you want to drop your spouse from a personal auto insurance policy, you must provide proof of separate auto insurance or...",
-          "source_id": "DOC-3006"
-        },
-        {
-          "step_number": 2,
           "action_title": "Review Policy Guidelines for Removing a Spouse or Driver from Auto Insurance Policies",
           "detailed_instruction": "According to verified documentation [DOC-3002], To remove a spouse or resident driver from an auto insurance policy, insurers require verification that the individual is no longer operating the insured vehicles. Accepted proof i...",
           "source_id": "DOC-3002"
         },
         {
+          "step_number": 2,
+          "action_title": "Review Policy Guidelines for Taxability of Auto Insurance Settlements and Property Damage Reimbursements",
+          "detailed_instruction": "According to verified documentation [DOC-3003], Under IRS guidelines, compensatory settlements received from auto insurance for physical injuries, physical sickness, and property damage repairs are non-taxable. However, settleme...",
+          "source_id": "DOC-3003"
+        },
+        {
           "step_number": 3,
-          "action_title": "Review Policy Guidelines for Where and How to Buy Auto Insurance: Independent Brokers vs Direct Online",
-          "detailed_instruction": "According to verified documentation [DOC-3008], Where should I go to buy a policy? When purchasing personal auto insurance, you can compare quotes through independent insurance agencies or apply directly via online carrier porta...",
-          "source_id": "DOC-3008"
+          "action_title": "Review Policy Guidelines for Understanding Split Liability Limits in Auto Insurance Policies",
+          "detailed_instruction": "According to verified documentation [DOC-3001], Split limits refer to the bodily injury and property damage liability portion of an auto insurance policy broken down into three distinct numbers, typically expressed in thousands ...",
+          "source_id": "DOC-3001"
         }
       ],
       "cited_source_ids": [
-        "DOC-3006",
         "DOC-3002",
-        "DOC-3008"
+        "DOC-3003",
+        "DOC-3001"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801059.6216578,
-    "latency_ms": 8267.89,
+    "timestamp": 1793803055.8423445,
+    "latency_ms": 9.68,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='auto', search_query_rewritten='how do i take someone off my insurance after separation? i need to remove my separated spouse from my personal auto insurance pol"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='auto', search_query_rewritten='i need to remove my separated spouse from my personal auto insurance policy so i am not paying for their driving.'), 'response': "
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801059.6301208,
-    "latency_ms": 6.44,
+    "timestamp": 1793803055.8493028,
+    "latency_ms": 4.98,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-4006', title='Removing an Ex-Spouse as Beneficiary on Life Insurance After Separation', category='life', sub_topic='spousal_beneficiary_removal', content='How do I take someone off my insurance after separation? In life insurance, removing a former spouse requires submitt"
+    "output_summary": "[ScoredDocument(doc_id='DOC-3002', title='Removing a Spouse or Driver from Auto Insurance Policies', category='auto', sub_topic='spouse_driver_removal', content='To remove a spouse or resident driver from an auto insurance policy, insurers require verification that the individual is no longer operat"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801063.7647622,
-    "latency_ms": 4129.66,
+    "timestamp": 1793803055.8533218,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -386,37 +386,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801063.76576,
-    "latency_ms": 4130.66,
+    "timestamp": 1793803055.854292,
+    "latency_ms": 0.97,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='will th"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801067.8908455,
-    "latency_ms": 4123.09,
+    "timestamp": 1793803055.856319,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "life",
-      "search_query_rewritten": "will the government take taxes from my insurance payout? my father passed away and left me a lump sum death benefit payout from his term life insurance policy."
+      "search_query_rewritten": "my father passed away and left me a lump sum death benefit payout from his term life insurance policy."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801067.8997295,
-    "latency_ms": 6.97,
+    "timestamp": 1793803055.868547,
+    "latency_ms": 5.27,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-4002', title='Federal Income Tax Exemption on Life Insurance Death Benefits', category='life', sub_topic='tax_death_benefits', content='Under Internal Revenue Code Section 101(a), life insurance death benefits paid to a designated beneficiary as a lump sum are 100% exempt"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801072.0287898,
-    "latency_ms": 4127.09,
+    "timestamp": 1793803055.8695445,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -436,38 +436,38 @@
         },
         {
           "step_number": 3,
-          "action_title": "Review Policy Guidelines for Where to Buy Term Life vs Universal Life Insurance",
-          "detailed_instruction": "According to verified documentation [DOC-4005], Where should I go to buy a policy? For term life and universal life policies, consumers can purchase through independent life insurance brokerage firms or direct online term aggreg...",
-          "source_id": "DOC-4005"
+          "action_title": "Review Policy Guidelines for How and Where to Buy Whole Life Insurance: Agents vs. Direct Brokers",
+          "detailed_instruction": "According to verified documentation [DOC-4001], You can purchase Whole Life insurance through licensed independent life insurance agents, captive agents representing a single carrier, or direct digital brokers. Working with an i...",
+          "source_id": "DOC-4001"
         }
       ],
       "cited_source_ids": [
         "DOC-4002",
         "DOC-4004",
-        "DOC-4005"
+        "DOC-4001"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801072.0307899,
-    "latency_ms": 8263.03,
+    "timestamp": 1793803055.8715386,
+    "latency_ms": 15.22,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='life', search_query_rewritten='will the government take taxes from my insurance payout? my father passed away and left me a lump sum death benefit payout from h"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='life', search_query_rewritten='my father passed away and left me a lump sum death benefit payout from his term life insurance policy.'), 'response': GroundedAss"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801072.039764,
-    "latency_ms": 6.98,
+    "timestamp": 1793803055.8785212,
+    "latency_ms": 5.98,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-4006', title='Removing an Ex-Spouse as Beneficiary on Life Insurance After Separation', category='life', sub_topic='spousal_beneficiary_removal', content='How do I take someone off my insurance after separation? In life insurance, removing a former spouse requires submitt"
+    "output_summary": "[ScoredDocument(doc_id='DOC-3003', title='Taxability of Auto Insurance Settlements and Property Damage Reimbursements', category='auto', sub_topic='tax_settlements', content='Under IRS guidelines, compensatory settlements received from auto insurance for physical injuries, physical sickness, and pro"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801076.1675234,
-    "latency_ms": 4123.77,
+    "timestamp": 1793803055.8835073,
+    "latency_ms": 1.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -479,37 +479,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801076.1695192,
-    "latency_ms": 4125.77,
+    "timestamp": 1793803055.8845046,
+    "latency_ms": 1.99,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='where s"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801080.2920594,
-    "latency_ms": 4121.54,
+    "timestamp": 1793803055.8869925,
+    "latency_ms": 0.44,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "life",
-      "search_query_rewritten": "where should i go to buy a policy? i want to purchase permanent whole life insurance with guaranteed cash value and need to know whether to use an independent broker or direct agent."
+      "search_query_rewritten": "i want to purchase permanent whole life insurance with guaranteed cash value and need to know whether to use an independent broker or direct agent."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801080.3000417,
-    "latency_ms": 5.95,
+    "timestamp": 1793803055.8949711,
+    "latency_ms": 6.94,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-4001', title='How and Where to Buy Whole Life Insurance: Agents vs. Direct Brokers', category='life', sub_topic='purchasing_whole_life', content='You can purchase Whole Life insurance through licensed independent life insurance agents, captive agents representing a single"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801084.4220617,
-    "latency_ms": 4120.03,
+    "timestamp": 1793803055.8969975,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -523,44 +523,44 @@
         },
         {
           "step_number": 2,
-          "action_title": "Review Policy Guidelines for Where to Buy Term Life vs Universal Life Insurance",
-          "detailed_instruction": "According to verified documentation [DOC-4005], Where should I go to buy a policy? For term life and universal life policies, consumers can purchase through independent life insurance brokerage firms or direct online term aggreg...",
-          "source_id": "DOC-4005"
-        },
-        {
-          "step_number": 3,
           "action_title": "Review Policy Guidelines for Term Life vs. Permanent Life Insurance Comparison",
           "detailed_instruction": "According to verified documentation [DOC-4004], Term life insurance provides temporary death benefit protection for a fixed period (typically 10, 20, or 30 years) with no cash value build-up, making it the most cost-effective op...",
           "source_id": "DOC-4004"
+        },
+        {
+          "step_number": 3,
+          "action_title": "Review Policy Guidelines for Federal Income Tax Exemption on Life Insurance Death Benefits",
+          "detailed_instruction": "According to verified documentation [DOC-4002], Under Internal Revenue Code Section 101(a), life insurance death benefits paid to a designated beneficiary as a lump sum are 100% exempt from federal and state income tax. However,...",
+          "source_id": "DOC-4002"
         }
       ],
       "cited_source_ids": [
         "DOC-4001",
-        "DOC-4005",
-        "DOC-4004"
+        "DOC-4004",
+        "DOC-4002"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801084.4240222,
-    "latency_ms": 8253.5,
+    "timestamp": 1793803055.8989923,
+    "latency_ms": 12.44,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='life', search_query_rewritten='where should i go to buy a policy? i want to purchase permanent whole life insurance with guaranteed cash value and need to know "
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='life', search_query_rewritten='i want to purchase permanent whole life insurance with guaranteed cash value and need to know whether to use an independent broke"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801084.4313598,
-    "latency_ms": 6.37,
+    "timestamp": 1793803055.9049926,
+    "latency_ms": 4.01,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-1007', title='How Sick Do You Have to Be for Short-Term Disability Benefits to Trigger?', category='health', sub_topic='disability_triggers', content='How sick do I have to be before the insurance pays out? For short-term disability insurance, benefits require medical cer"
+    "output_summary": "[ScoredDocument(doc_id='DOC-4001', title='How and Where to Buy Whole Life Insurance: Agents vs. Direct Brokers', category='life', sub_topic='purchasing_whole_life', content='You can purchase Whole Life insurance through licensed independent life insurance agents, captive agents representing a single"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801088.5703266,
-    "latency_ms": 4133.96,
+    "timestamp": 1793803055.9115462,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -572,37 +572,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801088.572216,
-    "latency_ms": 4135.85,
+    "timestamp": 1793803055.914557,
+    "latency_ms": 3.01,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='how muc"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801092.6928434,
-    "latency_ms": 4118.66,
+    "timestamp": 1793803055.9165335,
+    "latency_ms": 1.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "renters",
-      "search_query_rewritten": "how much coverage do i really need to buy? i am moving into a leased apartment and need to know how much renters personal property and liability insurance to purchase."
+      "search_query_rewritten": "i am moving into a leased apartment and need to know how much renters personal property and liability insurance to purchase."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801092.7018187,
-    "latency_ms": 7.01,
+    "timestamp": 1793803055.9232688,
+    "latency_ms": 5.71,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-5005', title='How Much Renters Insurance and Property Coverage Should You Buy?', category='renters', sub_topic='how_much_coverage', content='How much coverage do I really need to buy? To determine how much insurance you need, calculate your personal property replacement c"
+    "output_summary": "[ScoredDocument(doc_id='DOC-5001', title='Determining How Much Renters Insurance Should Be Purchased', category='renters', sub_topic='coverage_calculation', content=\"How much renters insurance you should purchase depends on the total replacement cost of your personal possessions and your personal li"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801096.8106072,
-    "latency_ms": 4106.79,
+    "timestamp": 1793803055.9252644,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -610,135 +610,92 @@
       "action_checklist": [
         {
           "step_number": 1,
-          "action_title": "Review Policy Guidelines for How Much Renters Insurance and Property Coverage Should You Buy?",
-          "detailed_instruction": "According to verified documentation [DOC-5005], How much coverage do I really need to buy? To determine how much insurance you need, calculate your personal property replacement cost and select at least $100,000 in liability....",
-          "source_id": "DOC-5005"
-        },
-        {
-          "step_number": 2,
           "action_title": "Review Policy Guidelines for Determining How Much Renters Insurance Should Be Purchased",
           "detailed_instruction": "According to verified documentation [DOC-5001], How much renters insurance you should purchase depends on the total replacement cost of your personal possessions and your personal liability risk profile. Industry standards recom...",
           "source_id": "DOC-5001"
         },
         {
-          "step_number": 3,
+          "step_number": 2,
           "action_title": "Review Policy Guidelines for Scheduled Personal Property Endorsements for High-Value Items",
           "detailed_instruction": "According to verified documentation [DOC-5004], Standard renters policies contain internal special sub-limits for theft of high-value personal items, typically capping reimbursement at $1,500 for jewelry and watches, $2,500 for ...",
           "source_id": "DOC-5004"
+        },
+        {
+          "step_number": 3,
+          "action_title": "Review Policy Guidelines for Actual Cash Value (ACV) vs. Replacement Cost Value (RCV) for Renters",
+          "detailed_instruction": "According to verified documentation [DOC-5002], When selecting renters insurance personal property coverage, policyholders must choose between Actual Cash Value (ACV) and Replacement Cost Value (RCV). ACV reimburses the item's c...",
+          "source_id": "DOC-5002"
         }
       ],
       "cited_source_ids": [
-        "DOC-5005",
         "DOC-5001",
-        "DOC-5004"
+        "DOC-5004",
+        "DOC-5002"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801096.8126042,
-    "latency_ms": 8238.42,
+    "timestamp": 1793803055.928272,
+    "latency_ms": 12.74,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='renters', search_query_rewritten='how much coverage do i really need to buy? i am moving into a leased apartment and need to know how much renters personal prop"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='renters', search_query_rewritten='i am moving into a leased apartment and need to know how much renters personal property and liability insurance to purchase.')"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801096.8205836,
-    "latency_ms": 5.98,
+    "timestamp": 1793803055.9353137,
+    "latency_ms": 4.07,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-1005', title='Tax Deductibility of Health Insurance Premiums and Flexible Spending Accounts', category='health', sub_topic='health_tax', content='Are insurance benefits and premiums taxed? Under IRS guidelines, health insurance employer subsidies are exempt from gross inc"
+    "output_summary": "[ScoredDocument(doc_id='DOC-5001', title='Determining How Much Renters Insurance Should Be Purchased', category='renters', sub_topic='coverage_calculation', content=\"How much renters insurance you should purchase depends on the total replacement cost of your personal possessions and your personal li"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801100.9444387,
-    "latency_ms": 4117.47,
+    "timestamp": 1793803055.9393053,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
-      "needs_clarification": false,
-      "clarifying_question": null,
-      "extracted_category": "medicare",
+      "needs_clarification": true,
+      "clarifying_question": "Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?",
+      "extracted_category": null,
       "search_query_rewritten": "what does ime mean in my medical billing document?"
     }
   },
   {
-    "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801100.9526231,
-    "latency_ms": 5.95,
-    "status": "SUCCESS",
-    "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-6001', title='Understanding Medicare Indirect Medical Education (IME) Adjustments', category='medicare', sub_topic='ime_adjustment', content=\"According to the Centers for Medicare and Medicaid Services (CMS.gov), IME stands for Indirect Medical Education. It represents a "
-  },
-  {
-    "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801105.080371,
-    "latency_ms": 4124.73,
-    "status": "SUCCESS",
-    "error": null,
-    "output": {
-      "situation_summary": "Analysis of user inquiry regarding medicare policy provisions.",
-      "action_checklist": [
-        {
-          "step_number": 1,
-          "action_title": "Review Policy Guidelines for Understanding Medicare Indirect Medical Education (IME) Adjustments",
-          "detailed_instruction": "According to verified documentation [DOC-6001], According to the Centers for Medicare and Medicaid Services (CMS.gov), IME stands for Indirect Medical Education. It represents a statutory payment calculation adjustment under Med...",
-          "source_id": "DOC-6001"
-        },
-        {
-          "step_number": 2,
-          "action_title": "Review Policy Guidelines for What Do the Numbers and Dates on Your Medicare Card Mean?",
-          "detailed_instruction": "According to verified documentation [DOC-6005], What do the numbers on my insurance card mean? Your Medicare card features a unique 11-character alphanumeric Medicare Beneficiary Identifier (MBI) along with effective start dates...",
-          "source_id": "DOC-6005"
-        },
-        {
-          "step_number": 3,
-          "action_title": "Review Policy Guidelines for Medicare Part A and Part B Enrollment Timelines and Penalties",
-          "detailed_instruction": "According to verified documentation [DOC-6003], Initial Enrollment Period (IEP) for Medicare lasts 7 months, beginning 3 months prior to your 65th birthday month and ending 3 months after. Failing to enroll in Medicare Part B wh...",
-          "source_id": "DOC-6003"
-        }
-      ],
-      "cited_source_ids": [
-        "DOC-6001",
-        "DOC-6005",
-        "DOC-6003"
-      ]
-    }
-  },
-  {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801105.0833757,
-    "latency_ms": 8256.4,
+    "timestamp": 1793803055.942299,
+    "latency_ms": 2.99,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='medicare', search_query_rewritten='what does ime mean in my medical billing document?'), 'response': GroundedAssistantResponse(situation_summary='Analysis of us"
+    "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='what do"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801109.204721,
-    "latency_ms": 4119.36,
+    "timestamp": 1793803055.9453032,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "medicare",
-      "search_query_rewritten": "what does ime mean in my medical billing document? it is on a medicare inpatient hospital reimbursement form from a university teaching medical center."
+      "search_query_rewritten": "it is on a medicare inpatient hospital reimbursement form from a university teaching medical center."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801109.2142856,
-    "latency_ms": 7.57,
+    "timestamp": 1793803055.95318,
+    "latency_ms": 5.86,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-6001', title='Understanding Medicare Indirect Medical Education (IME) Adjustments', category='medicare', sub_topic='ime_adjustment', content=\"According to the Centers for Medicare and Medicaid Services (CMS.gov), IME stands for Indirect Medical Education. It represents a "
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801113.3353014,
-    "latency_ms": 4118.05,
+    "timestamp": 1793803055.9551725,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -752,44 +709,44 @@
         },
         {
           "step_number": 2,
-          "action_title": "Review Policy Guidelines for What Do the Numbers and Dates on Your Medicare Card Mean?",
-          "detailed_instruction": "According to verified documentation [DOC-6005], What do the numbers on my insurance card mean? Your Medicare card features a unique 11-character alphanumeric Medicare Beneficiary Identifier (MBI) along with effective start dates...",
-          "source_id": "DOC-6005"
-        },
-        {
-          "step_number": 3,
           "action_title": "Review Policy Guidelines for Medicare Supplement (Medigap) vs. Medicare Advantage (Part C)",
           "detailed_instruction": "According to verified documentation [DOC-6004], Medicare Supplement Insurance (Medigap) works alongside Original Medicare to pay out-of-pocket deductibles, copayments, and coinsurance without physician network restrictions. In c...",
           "source_id": "DOC-6004"
+        },
+        {
+          "step_number": 3,
+          "action_title": "Review Policy Guidelines for Is Medicare Administered and Run by the Federal Government?",
+          "detailed_instruction": "According to verified documentation [DOC-6002], Medicare is a federal health insurance program administered directly by the Centers for Medicare and Medicaid Services (CMS), an agency of the U.S. Department of Health and Human S...",
+          "source_id": "DOC-6002"
         }
       ],
       "cited_source_ids": [
         "DOC-6001",
-        "DOC-6005",
-        "DOC-6004"
+        "DOC-6004",
+        "DOC-6002"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801113.337901,
-    "latency_ms": 8252.54,
+    "timestamp": 1793803055.9571676,
+    "latency_ms": 11.86,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='medicare', search_query_rewritten='what does ime mean in my medical billing document? it is on a medicare inpatient hospital reimbursement form from a universit"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='medicare', search_query_rewritten='it is on a medicare inpatient hospital reimbursement form from a university teaching medical center.'), 'response': GroundedA"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801113.3464036,
-    "latency_ms": 5.5,
+    "timestamp": 1793803055.966144,
+    "latency_ms": 5.02,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-3001', title='Understanding Split Liability Limits in Auto Insurance Policies', category='auto', sub_topic='split_limits', content='Split limits refer to the bodily injury and property damage liability portion of an auto insurance policy broken down into three distinct nu"
+    "output_summary": "[ScoredDocument(doc_id='DOC-6001', title='Understanding Medicare Indirect Medical Education (IME) Adjustments', category='medicare', sub_topic='ime_adjustment', content=\"According to the Centers for Medicare and Medicaid Services (CMS.gov), IME stands for Indirect Medical Education. It represents a "
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801117.4647136,
-    "latency_ms": 4111.3,
+    "timestamp": 1793803055.9701338,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -801,37 +758,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801117.468861,
-    "latency_ms": 4115.45,
+    "timestamp": 1793803055.9721282,
+    "latency_ms": 1.99,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='is the "
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801121.5985334,
-    "latency_ms": 4125.68,
+    "timestamp": 1793803055.9750893,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "medicare",
-      "search_query_rewritten": "is the insurance run by the government or private companies? i am asking about federal medicare healthcare coverage for seniors."
+      "search_query_rewritten": "i am asking about federal medicare healthcare coverage for seniors."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801121.6085212,
-    "latency_ms": 6.99,
+    "timestamp": 1793803055.9829373,
+    "latency_ms": 3.84,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-6002', title='Is Medicare Administered and Run by the Federal Government?', category='medicare', sub_topic='government_administration', content='Medicare is a federal health insurance program administered directly by the Centers for Medicare and Medicaid Services (CMS), a"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801125.7322476,
-    "latency_ms": 4121.71,
+    "timestamp": 1793803055.9859636,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -851,38 +808,38 @@
         },
         {
           "step_number": 3,
-          "action_title": "Review Policy Guidelines for What Do the Numbers and Dates on Your Medicare Card Mean?",
-          "detailed_instruction": "According to verified documentation [DOC-6005], What do the numbers on my insurance card mean? Your Medicare card features a unique 11-character alphanumeric Medicare Beneficiary Identifier (MBI) along with effective start dates...",
-          "source_id": "DOC-6005"
+          "action_title": "Review Policy Guidelines for Medicare Part A and Part B Enrollment Timelines and Penalties",
+          "detailed_instruction": "According to verified documentation [DOC-6003], Initial Enrollment Period (IEP) for Medicare lasts 7 months, beginning 3 months prior to your 65th birthday month and ending 3 months after. Failing to enroll in Medicare Part B wh...",
+          "source_id": "DOC-6003"
         }
       ],
       "cited_source_ids": [
         "DOC-6002",
         "DOC-6004",
-        "DOC-6005"
+        "DOC-6003"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801125.7362313,
-    "latency_ms": 8263.38,
+    "timestamp": 1793803055.9879587,
+    "latency_ms": 12.87,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='medicare', search_query_rewritten='is the insurance run by the government or private companies? i am asking about federal medicare healthcare coverage for senio"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='medicare', search_query_rewritten='i am asking about federal medicare healthcare coverage for seniors.'), 'response': GroundedAssistantResponse(situation_summar"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801125.7461545,
-    "latency_ms": 6.93,
+    "timestamp": 1793803055.9954414,
+    "latency_ms": 5.49,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-3008', title='Where and How to Buy Auto Insurance: Independent Brokers vs Direct Online', category='auto', sub_topic='where_to_buy_auto', content='Where should I go to buy a policy? When purchasing personal auto insurance, you can compare quotes through independent insura"
+    "output_summary": "[ScoredDocument(doc_id='DOC-6002', title='Is Medicare Administered and Run by the Federal Government?', category='medicare', sub_topic='government_administration', content='Medicare is a federal health insurance program administered directly by the Centers for Medicare and Medicaid Services (CMS), a"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801129.8684785,
-    "latency_ms": 4115.34,
+    "timestamp": 1793803056.0004618,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -894,37 +851,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801129.8704727,
-    "latency_ms": 4117.34,
+    "timestamp": 1793803056.0024571,
+    "latency_ms": 2.0,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='how sic"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801133.999457,
-    "latency_ms": 4125.99,
+    "timestamp": 1793803056.0044534,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "long_term_care",
-      "search_query_rewritten": "how sick do i have to be before the insurance pays out? i have a tax-qualified long-term care policy and need to know what physical triggers allow me to claim benefits."
+      "search_query_rewritten": "i have a tax-qualified long-term care policy and need to know what physical triggers allow me to claim benefits."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801134.0108721,
-    "latency_ms": 7.39,
+    "timestamp": 1793803056.0129757,
+    "latency_ms": 6.14,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-2001', title='Tax Treatment of Long-Term Care Insurance Benefits and Lump Sums', category='long_term_care', sub_topic='tax_treatment', content='Generally speaking, benefits paid under a tax-qualified Long-Term Care (LTC) insurance contract are received 100% tax-free under"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801138.1385422,
-    "latency_ms": 4125.68,
+    "timestamp": 1793803056.0159986,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -938,44 +895,44 @@
         },
         {
           "step_number": 2,
-          "action_title": "Review Policy Guidelines for State Long-Term Care Partnership Programs and Medicaid Asset Protection",
-          "detailed_instruction": "According to verified documentation [DOC-2004], State Long-Term Care Partnership policies provide dollar-for-dollar Medicaid asset protection. For every dollar of benefits paid out by a certified Partnership policy, the policyho...",
-          "source_id": "DOC-2004"
-        },
-        {
-          "step_number": 3,
           "action_title": "Review Policy Guidelines for Activities of Daily Living (ADLs) and LTC Benefit Triggers",
           "detailed_instruction": "According to verified documentation [DOC-2002], To qualify for benefits under a tax-qualified long-term care policy, a licensed healthcare practitioner must certify that the insured is chronically ill. This requires the inabilit...",
           "source_id": "DOC-2002"
+        },
+        {
+          "step_number": 3,
+          "action_title": "Review Policy Guidelines for State Long-Term Care Partnership Programs and Medicaid Asset Protection",
+          "detailed_instruction": "According to verified documentation [DOC-2004], State Long-Term Care Partnership policies provide dollar-for-dollar Medicaid asset protection. For every dollar of benefits paid out by a certified Partnership policy, the policyho...",
+          "source_id": "DOC-2004"
         }
       ],
       "cited_source_ids": [
         "DOC-2001",
-        "DOC-2004",
-        "DOC-2002"
+        "DOC-2002",
+        "DOC-2004"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801138.1415036,
-    "latency_ms": 8268.04,
+    "timestamp": 1793803056.0179965,
+    "latency_ms": 13.54,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='long_term_care', search_query_rewritten='how sick do i have to be before the insurance pays out? i have a tax-qualified long-term care policy and need to know w"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='long_term_care', search_query_rewritten='i have a tax-qualified long-term care policy and need to know what physical triggers allow me to claim benefits.'), 're"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801138.1499367,
-    "latency_ms": 5.44,
+    "timestamp": 1793803056.0249465,
+    "latency_ms": 4.95,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-1005', title='Tax Deductibility of Health Insurance Premiums and Flexible Spending Accounts', category='health', sub_topic='health_tax', content='Are insurance benefits and premiums taxed? Under IRS guidelines, health insurance employer subsidies are exempt from gross inc"
+    "output_summary": "[ScoredDocument(doc_id='DOC-2002', title='Activities of Daily Living (ADLs) and LTC Benefit Triggers', category='long_term_care', sub_topic='benefit_triggers', content=\"To qualify for benefits under a tax-qualified long-term care policy, a licensed healthcare practitioner must certify that the insur"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801142.2740798,
-    "latency_ms": 4117.13,
+    "timestamp": 1793803056.0309637,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -987,37 +944,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801142.277071,
-    "latency_ms": 4120.12,
+    "timestamp": 1793803056.0339472,
+    "latency_ms": 2.98,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='can i p"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801146.405175,
-    "latency_ms": 4126.11,
+    "timestamp": 1793803056.0369143,
+    "latency_ms": 0.97,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "health",
-      "search_query_rewritten": "can i pull my money out of my account without penalties? i want to take a cash withdrawal from my health savings account (hsa) for non-medical expenses before age 65."
+      "search_query_rewritten": "i want to take a cash withdrawal from my health savings account (hsa) for non-medical expenses before age 65."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801146.415827,
-    "latency_ms": 7.6,
+    "timestamp": 1793803056.046013,
+    "latency_ms": 7.07,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-1003', title='Health Savings Account (HSA) Tax Treatment and Qualified Medical Expenses', category='health', sub_topic='hsa_tax', content='Contributions to a Health Savings Account (HSA) are 100% tax-deductible or made pre-tax through employer payroll deductions. Earnings"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801150.543279,
-    "latency_ms": 4123.47,
+    "timestamp": 1793803056.0484014,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -1031,44 +988,44 @@
         },
         {
           "step_number": 2,
-          "action_title": "Review Policy Guidelines for How Sick Do You Have to Be for Short-Term Disability Benefits to Trigger?",
-          "detailed_instruction": "According to verified documentation [DOC-1007], How sick do I have to be before the insurance pays out? For short-term disability insurance, benefits require medical certification of total inability to perform your regular occup...",
-          "source_id": "DOC-1007"
+          "action_title": "Review Policy Guidelines for Dropping a Spouse from Employer Health Insurance Outside Open Enrollment",
+          "detailed_instruction": "According to verified documentation [DOC-1001], Can you drop your spouse from your health insurance policy? The answer strictly depends on employer plan rules and state regulations. Under Section 125 cafeteria plans, you general...",
+          "source_id": "DOC-1001"
         },
         {
           "step_number": 3,
-          "action_title": "Review Policy Guidelines for Tax Deductibility of Health Insurance Premiums and Flexible Spending Accounts",
-          "detailed_instruction": "According to verified documentation [DOC-1005], Are insurance benefits and premiums taxed? Under IRS guidelines, health insurance employer subsidies are exempt from gross income. Health benefits paid directly to healthcare provi...",
-          "source_id": "DOC-1005"
+          "action_title": "Review Policy Guidelines for Spousal Removal and Special Enrollment Period Rules",
+          "detailed_instruction": "According to verified documentation [DOC-1002], When removing a spouse from an ACA-compliant health insurance plan following a Qualifying Life Event (QLE), you have a strict 30-day (or 60-day for ACA exchanges) special enrollmen...",
+          "source_id": "DOC-1002"
         }
       ],
       "cited_source_ids": [
         "DOC-1003",
-        "DOC-1007",
-        "DOC-1005"
+        "DOC-1001",
+        "DOC-1002"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801150.5468056,
-    "latency_ms": 8267.74,
+    "timestamp": 1793803056.0504,
+    "latency_ms": 14.45,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='health', search_query_rewritten='can i pull my money out of my account without penalties? i want to take a cash withdrawal from my health savings account (hsa) "
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='health', search_query_rewritten='i want to take a cash withdrawal from my health savings account (hsa) for non-medical expenses before age 65.'), 'response': Gr"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801150.5567787,
-    "latency_ms": 6.95,
+    "timestamp": 1793803056.0583441,
+    "latency_ms": 4.96,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-1006', title='Understanding Deductible, Copay, and Coinsurance Numbers on Your Health Card', category='health', sub_topic='card_numbers', content='What do the numbers on my insurance card mean? The numbers on your health insurance card represent your copayment amounts for"
+    "output_summary": "[ScoredDocument(doc_id='DOC-1003', title='Health Savings Account (HSA) Tax Treatment and Qualified Medical Expenses', category='health', sub_topic='hsa_tax', content='Contributions to a Health Savings Account (HSA) are 100% tax-deductible or made pre-tax through employer payroll deductions. Earnings"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801154.6774735,
-    "latency_ms": 4114.68,
+    "timestamp": 1793803056.0653558,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -1080,37 +1037,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801154.6804976,
-    "latency_ms": 4117.7,
+    "timestamp": 1793803056.0678236,
+    "latency_ms": 2.47,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='does my"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801158.822059,
-    "latency_ms": 4138.57,
+    "timestamp": 1793803056.0704188,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "renters",
-      "search_query_rewritten": "does my policy pay if i cannot live in my home? a pipe burst in my rented apartment causing flooding, and i need my renters insurance to cover hotel and food costs while repairs take place."
+      "search_query_rewritten": "a pipe burst in my rented apartment causing flooding, and i need my renters insurance to cover hotel and food costs while repairs take place."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801158.8322682,
-    "latency_ms": 7.19,
+    "timestamp": 1793803056.079874,
+    "latency_ms": 6.43,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-5003', title='Loss of Use and Additional Living Expenses (ALE) for Tenants', category='renters', sub_topic='loss_of_use', content='If your rented home becomes uninhabitable due to a covered peril (such as fire, smoke, or severe burst pipe damage), Loss of Use coverage (Co"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801162.9504,
-    "latency_ms": 4115.14,
+    "timestamp": 1793803056.0818694,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -1124,44 +1081,44 @@
         },
         {
           "step_number": 2,
-          "action_title": "Review Policy Guidelines for How Much Renters Insurance and Property Coverage Should You Buy?",
-          "detailed_instruction": "According to verified documentation [DOC-5005], How much coverage do I really need to buy? To determine how much insurance you need, calculate your personal property replacement cost and select at least $100,000 in liability....",
-          "source_id": "DOC-5005"
-        },
-        {
-          "step_number": 3,
           "action_title": "Review Policy Guidelines for Determining How Much Renters Insurance Should Be Purchased",
           "detailed_instruction": "According to verified documentation [DOC-5001], How much renters insurance you should purchase depends on the total replacement cost of your personal possessions and your personal liability risk profile. Industry standards recom...",
           "source_id": "DOC-5001"
+        },
+        {
+          "step_number": 3,
+          "action_title": "Review Policy Guidelines for Actual Cash Value (ACV) vs. Replacement Cost Value (RCV) for Renters",
+          "detailed_instruction": "According to verified documentation [DOC-5002], When selecting renters insurance personal property coverage, policyholders must choose between Actual Cash Value (ACV) and Replacement Cost Value (RCV). ACV reimburses the item's c...",
+          "source_id": "DOC-5002"
         }
       ],
       "cited_source_ids": [
         "DOC-5003",
-        "DOC-5005",
-        "DOC-5001"
+        "DOC-5001",
+        "DOC-5002"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801162.9544246,
-    "latency_ms": 8270.93,
+    "timestamp": 1793803056.084864,
+    "latency_ms": 14.45,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='renters', search_query_rewritten='does my policy pay if i cannot live in my home? a pipe burst in my rented apartment causing flooding, and i need my renters in"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='renters', search_query_rewritten='a pipe burst in my rented apartment causing flooding, and i need my renters insurance to cover hotel and food costs while repa"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801162.9630313,
-    "latency_ms": 5.61,
+    "timestamp": 1793803056.0921526,
+    "latency_ms": 4.96,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-4004', title='Term Life vs. Permanent Life Insurance Comparison', category='life', sub_topic='term_vs_permanent', content='Term life insurance provides temporary death benefit protection for a fixed period (typically 10, 20, or 30 years) with no cash value build-up, makin"
+    "output_summary": "[ScoredDocument(doc_id='DOC-5003', title='Loss of Use and Additional Living Expenses (ALE) for Tenants', category='renters', sub_topic='loss_of_use', content='If your rented home becomes uninhabitable due to a covered peril (such as fire, smoke, or severe burst pipe damage), Loss of Use coverage (Co"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801167.1685038,
-    "latency_ms": 4200.08,
+    "timestamp": 1793803056.099164,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -1173,37 +1130,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801167.1735106,
-    "latency_ms": 4205.08,
+    "timestamp": 1793803056.1021552,
+    "latency_ms": 2.99,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='is ther"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801171.302033,
-    "latency_ms": 4124.72,
+    "timestamp": 1793803056.1041472,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "medicare",
-      "search_query_rewritten": "is there a penalty if i delay signing up? i turned 65 last year and did not enroll in medicare part b because i was not working and had no group coverage."
+      "search_query_rewritten": "i turned 65 last year and did not enroll in medicare part b because i was not working and had no group coverage."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801171.3134317,
-    "latency_ms": 6.98,
+    "timestamp": 1793803056.1134884,
+    "latency_ms": 5.98,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-6003', title='Medicare Part A and Part B Enrollment Timelines and Penalties', category='medicare', sub_topic='enrollment_penalties', content='Initial Enrollment Period (IEP) for Medicare lasts 7 months, beginning 3 months prior to your 65th birthday month and ending 3 mon"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801175.4594457,
-    "latency_ms": 4143.0,
+    "timestamp": 1793803056.1164784,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -1223,38 +1180,38 @@
         },
         {
           "step_number": 3,
-          "action_title": "Review Policy Guidelines for What Do the Numbers and Dates on Your Medicare Card Mean?",
-          "detailed_instruction": "According to verified documentation [DOC-6005], What do the numbers on my insurance card mean? Your Medicare card features a unique 11-character alphanumeric Medicare Beneficiary Identifier (MBI) along with effective start dates...",
-          "source_id": "DOC-6005"
+          "action_title": "Review Policy Guidelines for Is Medicare Administered and Run by the Federal Government?",
+          "detailed_instruction": "According to verified documentation [DOC-6002], Medicare is a federal health insurance program administered directly by the Centers for Medicare and Medicaid Services (CMS), an agency of the U.S. Department of Health and Human S...",
+          "source_id": "DOC-6002"
         }
       ],
       "cited_source_ids": [
         "DOC-6003",
         "DOC-6004",
-        "DOC-6005"
+        "DOC-6002"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801175.4634023,
-    "latency_ms": 8286.09,
+    "timestamp": 1793803056.119473,
+    "latency_ms": 15.33,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='medicare', search_query_rewritten='is there a penalty if i delay signing up? i turned 65 last year and did not enroll in medicare part b because i was not worki"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='medicare', search_query_rewritten='i turned 65 last year and did not enroll in medicare part b because i was not working and had no group coverage.'), 'response"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801175.4737508,
-    "latency_ms": 6.98,
+    "timestamp": 1793803056.12746,
+    "latency_ms": 5.01,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-5005', title='How Much Renters Insurance and Property Coverage Should You Buy?', category='renters', sub_topic='how_much_coverage', content='How much coverage do I really need to buy? To determine how much insurance you need, calculate your personal property replacement c"
+    "output_summary": "[ScoredDocument(doc_id='DOC-6003', title='Medicare Part A and Part B Enrollment Timelines and Penalties', category='medicare', sub_topic='enrollment_penalties', content='Initial Enrollment Period (IEP) for Medicare lasts 7 months, beginning 3 months prior to your 65th birthday month and ending 3 mon"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801179.5981538,
-    "latency_ms": 4117.42,
+    "timestamp": 1793803056.1344159,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -1266,37 +1223,37 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801179.6021454,
-    "latency_ms": 4121.41,
+    "timestamp": 1793803056.137398,
+    "latency_ms": 2.98,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='do i ha"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801183.7281404,
-    "latency_ms": 4122.0,
+    "timestamp": 1793803056.1403856,
+    "latency_ms": 0.97,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "auto",
-      "search_query_rewritten": "do i have to report my legal settlement on my tax return? i received an auto insurance settlement following a car crash covering medical injury bills and vehicle repairs."
+      "search_query_rewritten": "i received an auto insurance settlement following a car crash covering medical injury bills and vehicle repairs."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801183.7386591,
-    "latency_ms": 6.98,
+    "timestamp": 1793803056.1500132,
+    "latency_ms": 5.64,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-3007', title='Taxation of Car Crash Insurance Settlements vs Lost Income', category='auto', sub_topic='settlement_taxes', content='Will the government take taxes from my insurance payout? Settlements for physical injuries resulting from car accidents are non-taxable under"
+    "output_summary": "[ScoredDocument(doc_id='DOC-3003', title='Taxability of Auto Insurance Settlements and Property Damage Reimbursements', category='auto', sub_topic='tax_settlements', content='Under IRS guidelines, compensatory settlements received from auto insurance for physical injuries, physical sickness, and pro"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801187.8642397,
-    "latency_ms": 4122.59,
+    "timestamp": 1793803056.1530054,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -1304,15 +1261,15 @@
       "action_checklist": [
         {
           "step_number": 1,
-          "action_title": "Review Policy Guidelines for Taxation of Car Crash Insurance Settlements vs Lost Income",
-          "detailed_instruction": "According to verified documentation [DOC-3007], Will the government take taxes from my insurance payout? Settlements for physical injuries resulting from car accidents are non-taxable under IRS rules, whereas lost wage replaceme...",
-          "source_id": "DOC-3007"
-        },
-        {
-          "step_number": 2,
           "action_title": "Review Policy Guidelines for Taxability of Auto Insurance Settlements and Property Damage Reimbursements",
           "detailed_instruction": "According to verified documentation [DOC-3003], Under IRS guidelines, compensatory settlements received from auto insurance for physical injuries, physical sickness, and property damage repairs are non-taxable. However, settleme...",
           "source_id": "DOC-3003"
+        },
+        {
+          "step_number": 2,
+          "action_title": "Review Policy Guidelines for Understanding Split Liability Limits in Auto Insurance Policies",
+          "detailed_instruction": "According to verified documentation [DOC-3001], Split limits refer to the bodily injury and property damage liability portion of an auto insurance policy broken down into three distinct numbers, typically expressed in thousands ...",
+          "source_id": "DOC-3001"
         },
         {
           "step_number": 3,
@@ -1322,117 +1279,74 @@
         }
       ],
       "cited_source_ids": [
-        "DOC-3007",
         "DOC-3003",
+        "DOC-3001",
         "DOC-3002"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801187.8675206,
-    "latency_ms": 8261.39,
+    "timestamp": 1793803056.1560054,
+    "latency_ms": 16.59,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='auto', search_query_rewritten='do i have to report my legal settlement on my tax return? i received an auto insurance settlement following a car crash covering "
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='auto', search_query_rewritten='i received an auto insurance settlement following a car crash covering medical injury bills and vehicle repairs.'), 'response': G"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801187.877503,
-    "latency_ms": 6.0,
+    "timestamp": 1793803056.164981,
+    "latency_ms": 5.02,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-5005', title='How Much Renters Insurance and Property Coverage Should You Buy?', category='renters', sub_topic='how_much_coverage', content='How much coverage do I really need to buy? To determine how much insurance you need, calculate your personal property replacement c"
+    "output_summary": "[ScoredDocument(doc_id='DOC-3003', title='Taxability of Auto Insurance Settlements and Property Damage Reimbursements', category='auto', sub_topic='tax_settlements', content='Under IRS guidelines, compensatory settlements received from auto insurance for physical injuries, physical sickness, and pro"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801192.005369,
-    "latency_ms": 4120.89,
+    "timestamp": 1793803056.1714253,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
-      "needs_clarification": false,
-      "clarifying_question": null,
-      "extracted_category": "life",
+      "needs_clarification": true,
+      "clarifying_question": "Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?",
+      "extracted_category": null,
       "search_query_rewritten": "can i remove someone as my beneficiary without them knowing?"
     }
   },
   {
-    "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801192.0162606,
-    "latency_ms": 6.92,
-    "status": "SUCCESS",
-    "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-4006', title='Removing an Ex-Spouse as Beneficiary on Life Insurance After Separation', category='life', sub_topic='spousal_beneficiary_removal', content='How do I take someone off my insurance after separation? In life insurance, removing a former spouse requires submitt"
-  },
-  {
-    "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801196.1323164,
-    "latency_ms": 4112.07,
-    "status": "SUCCESS",
-    "error": null,
-    "output": {
-      "situation_summary": "Analysis of user inquiry regarding life policy provisions.",
-      "action_checklist": [
-        {
-          "step_number": 1,
-          "action_title": "Review Policy Guidelines for Removing an Ex-Spouse as Beneficiary on Life Insurance After Separation",
-          "detailed_instruction": "According to verified documentation [DOC-4006], How do I take someone off my insurance after separation? In life insurance, removing a former spouse requires submitting a Change of Beneficiary form, though community property rul...",
-          "source_id": "DOC-4006"
-        },
-        {
-          "step_number": 2,
-          "action_title": "Review Policy Guidelines for Federal Income Tax Exemption on Life Insurance Death Benefits",
-          "detailed_instruction": "According to verified documentation [DOC-4002], Under Internal Revenue Code Section 101(a), life insurance death benefits paid to a designated beneficiary as a lump sum are 100% exempt from federal and state income tax. However,...",
-          "source_id": "DOC-4002"
-        },
-        {
-          "step_number": 3,
-          "action_title": "Review Policy Guidelines for Changing Beneficiaries and Spousal Rights in Community Property States",
-          "detailed_instruction": "According to verified documentation [DOC-4003], On most life insurance policies, the policyholder has the unilateral right to change beneficiaries at any time if the designation is revocable. However, in community property state...",
-          "source_id": "DOC-4003"
-        }
-      ],
-      "cited_source_ids": [
-        "DOC-4006",
-        "DOC-4002",
-        "DOC-4003"
-      ]
-    }
-  },
-  {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801196.1353436,
-    "latency_ms": 8250.86,
+    "timestamp": 1793803056.174384,
+    "latency_ms": 2.96,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='life', search_query_rewritten='can i remove someone as my beneficiary without them knowing?'), 'response': GroundedAssistantResponse(situation_summary='Analysis"
+    "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='can i r"
   },
   {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793801200.2611392,
-    "latency_ms": 4120.81,
+    "timestamp": 1793803056.180367,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "life",
-      "search_query_rewritten": "can i remove someone as my beneficiary without them knowing? i want to change the primary beneficiary on my personal life insurance policy in a community property state."
+      "search_query_rewritten": "i want to change the primary beneficiary on my personal life insurance policy in a community property state."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801200.2726169,
-    "latency_ms": 7.46,
+    "timestamp": 1793803056.1886568,
+    "latency_ms": 5.27,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-4006', title='Removing an Ex-Spouse as Beneficiary on Life Insurance After Separation', category='life', sub_topic='spousal_beneficiary_removal', content='How do I take someone off my insurance after separation? In life insurance, removing a former spouse requires submitt"
+    "output_summary": "[ScoredDocument(doc_id='DOC-4003', title='Changing Beneficiaries and Spousal Rights in Community Property States', category='life', sub_topic='beneficiary_designation', content='On most life insurance policies, the policyholder has the unilateral right to change beneficiaries at any time if the desi"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793801204.3864298,
-    "latency_ms": 4109.83,
+    "timestamp": 1793803056.191618,
+    "latency_ms": 0.0,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -1440,50 +1354,50 @@
       "action_checklist": [
         {
           "step_number": 1,
-          "action_title": "Review Policy Guidelines for Removing an Ex-Spouse as Beneficiary on Life Insurance After Separation",
-          "detailed_instruction": "According to verified documentation [DOC-4006], How do I take someone off my insurance after separation? In life insurance, removing a former spouse requires submitting a Change of Beneficiary form, though community property rul...",
-          "source_id": "DOC-4006"
-        },
-        {
-          "step_number": 2,
           "action_title": "Review Policy Guidelines for Changing Beneficiaries and Spousal Rights in Community Property States",
           "detailed_instruction": "According to verified documentation [DOC-4003], On most life insurance policies, the policyholder has the unilateral right to change beneficiaries at any time if the designation is revocable. However, in community property state...",
           "source_id": "DOC-4003"
         },
         {
-          "step_number": 3,
+          "step_number": 2,
           "action_title": "Review Policy Guidelines for Federal Income Tax Exemption on Life Insurance Death Benefits",
           "detailed_instruction": "According to verified documentation [DOC-4002], Under Internal Revenue Code Section 101(a), life insurance death benefits paid to a designated beneficiary as a lump sum are 100% exempt from federal and state income tax. However,...",
           "source_id": "DOC-4002"
+        },
+        {
+          "step_number": 3,
+          "action_title": "Review Policy Guidelines for Term Life vs. Permanent Life Insurance Comparison",
+          "detailed_instruction": "According to verified documentation [DOC-4004], Term life insurance provides temporary death benefit protection for a fixed period (typically 10, 20, or 30 years) with no cash value build-up, making it the most cost-effective op...",
+          "source_id": "DOC-4004"
         }
       ],
       "cited_source_ids": [
-        "DOC-4006",
         "DOC-4003",
-        "DOC-4002"
+        "DOC-4002",
+        "DOC-4004"
       ]
     }
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793801204.3904204,
-    "latency_ms": 8250.09,
+    "timestamp": 1793803056.1956375,
+    "latency_ms": 15.27,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='life', search_query_rewritten='can i remove someone as my beneficiary without them knowing? i want to change the primary beneficiary on my personal life insuran"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='life', search_query_rewritten='i want to change the primary beneficiary on my personal life insurance policy in a community property state.'), 'response': Groun"
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793801204.3996267,
-    "latency_ms": 5.2,
+    "timestamp": 1793803056.2035904,
+    "latency_ms": 3.96,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-1005', title='Tax Deductibility of Health Insurance Premiums and Flexible Spending Accounts', category='health', sub_topic='health_tax', content='Are insurance benefits and premiums taxed? Under IRS guidelines, health insurance employer subsidies are exempt from gross inc"
+    "output_summary": "[ScoredDocument(doc_id='DOC-4003', title='Changing Beneficiaries and Spousal Rights in Community Property States', category='life', sub_topic='beneficiary_designation', content='On most life insurance policies, the policyholder has the unilateral right to change beneficiaries at any time if the desi"
   },
   {
     "span_name": "run_golden_eval_suite",
-    "timestamp": 1793801204.4172206,
-    "latency_ms": 194577.85,
+    "timestamp": 1793803056.2199843,
+    "latency_ms": 550.16,
     "status": "SUCCESS",
     "error": null
   }

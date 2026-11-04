@@ -24,16 +24,18 @@ logger = logging.getLogger("rag_conversational_assistant.assistant")
 # Robust domain category regex patterns (strictly matching user intent)
 CATEGORY_PATTERNS = [
     ("long_term_care", [r"\blong-term care\b", r"\blong term care\b", r"\bltc\b", r"\badl\b", r"\badls\b", r"\bchronically ill\b"]),
-    ("medicare", [r"\bmedicare\b", r"\bmedigap\b", r"\bpart a\b", r"\bpart b\b", r"\bpart c\b", r"\bpart d\b", r"\bime\b", r"\bhospital reimbursement\b"]),
+    ("medicare", [r"\bmedicare\b", r"\bmedigap\b", r"\bpart a\b", r"\bpart b\b", r"\bpart c\b", r"\bpart d\b", r"\bmedicare ime\b", r"\bindirect medical education\b", r"\bhospital reimbursement\b"]),
     ("renters", [r"\brenter\b", r"\brenters\b", r"\brent\b", r"\btenant\b", r"\bapartment\b", r"\blandlord\b"]),
     ("auto", [r"\bauto\b", r"\bcar\b", r"\bdriver\b", r"\bvehicle\b", r"\bsplit limit\b", r"\bsplit limits\b", r"\bcrash\b", r"\bcollision\b"]),
-    ("life", [r"\bwhole life\b", r"\bterm life\b", r"\bdeath benefit\b", r"\blife insurance\b", r"\bbeneficiary\b"]),
+    ("life", [r"\bwhole life\b", r"\bterm life\b", r"\bdeath benefit\b", r"\blife insurance\b", r"\blife policy beneficiary\b", r"\blife insurance beneficiary\b"]),
     ("health", [r"\bhealth insurance\b", r"\bhealth policy\b", r"\bhsa\b", r"\bcobra\b", r"\bhealth plan\b"])
 ]
 
 
 def _call_llm_with_retry(messages: List[Dict[str, str]], max_retries: int = 2) -> Optional[str]:
     """Execute LLM chat completion with model failover and configurable pacing."""
+    if not config.api_key or config.api_key == "placeholder_key_for_offline_mode":
+        return None
     rate_limit_delay = float(os.getenv("RATE_LIMIT_DELAY_S", "0.0"))
     for model_name in config.fallback_models:
         for attempt in range(max_retries):
@@ -139,7 +141,7 @@ Respond ONLY with a valid JSON object matching this exact schema:
             needs_clarification=False,
             clarifying_question=None,
             extracted_category=detected_cat,
-            search_query_rewritten=combined_user_text
+            search_query_rewritten=latest_user_text
         )
 
     @observe("synthesize_grounded_response")

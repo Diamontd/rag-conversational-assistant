@@ -577,7 +577,10 @@ class KnowledgeBaseRetriever:
         if os.path.isfile(cache_file):
             try:
                 with open(cache_file, "r", encoding="utf-8") as f:
-                    self._corpus_cache = json.load(f)
+                    raw_cache = json.load(f)
+                    self._corpus_cache = dict(raw_cache)
+                    for k, v in raw_cache.items():
+                        self._corpus_cache[k.strip().lower()] = v
             except Exception as e:
                 logger.debug(f"Could not load corpus embedding cache: {e}")
 
@@ -585,6 +588,10 @@ class KnowledgeBaseRetriever:
         """Obtain embedding using query cache and resilient backoff."""
         if text in self._query_cache:
             return self._query_cache[text]
+
+        if text in self._corpus_cache:
+            self._query_cache[text] = self._corpus_cache[text]
+            return self._corpus_cache[text]
 
         if config.api_key:
             for attempt in range(3):

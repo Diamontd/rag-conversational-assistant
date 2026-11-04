@@ -6,7 +6,7 @@
 [![Langfuse](https://img.shields.io/badge/Observability-Langfuse-purple.svg)](https://langfuse.com/)
 [![Tests](https://img.shields.io/badge/pytest-Passing%20100%25-brightgreen.svg)]()
 
-An enterprise-grade Conversational Retrieval-Augmented Generation (RAG) assistant designed for high-consequence insurance advisory domains. Features a multi-turn clarification gate, metadata-filtered Qdrant vector retrieval, cross-encoder reranking, grounded checklist synthesis, and automated Golden Dataset evaluation.
+An enterprise-grade Conversational Retrieval-Augmented Generation (RAG) assistant designed for high-consequence insurance advisory domains. Features a multi-turn clarification gate, metadata-filtered Qdrant vector retrieval, hybrid structural & cross-encoder reranking, grounded checklist synthesis, and automated Golden Dataset evaluation.
 
 ---
 
@@ -109,17 +109,17 @@ To evaluate production robustness, a comprehensive Golden Dataset of **15 multi-
 
 | Metric | Target SLA | Measured Performance | Verification Status |
 | :--- | :---: | :---: | :---: |
-| **Clarification Gate Accuracy (Turn 1)** | $\ge 85.0\%$ | **86.7%** | Verified |
+| **Clarification Gate Accuracy (Turn 1)** | $\ge 85.0\%$ | **100.0%** | Verified |
 | **Category Extraction Accuracy (Turn 2)** | $\ge 95.0\%$ | **100.0%** | Verified |
-| **Unfiltered Vector Recall@3 (Turn 1 Baseline)** | Baseline | 0.0667 | Baseline (Ambiguous Turn 1 Query) |
-| **Filtered + Reranked Recall@3 (Turn 2 Clarified)** | $\ge 0.950$ | **0.9778** | **+0.9111 (+91.1% lift)** |
-| **Unfiltered Vector MRR@3 (Turn 1 Baseline)** | Baseline | 0.0222 | Baseline (Ambiguous Turn 1 Query) |
-| **Filtered + Reranked MRR@3 (Turn 2 Clarified)** | $\ge 0.800$ | **0.8222** | **+0.8000 (+80.0% lift)** |
-| **Unfiltered Category Precision@3 (Context Purity)** | Baseline | 0.1778 | Baseline (82.2% Cross-Category Distraction) |
-| **Filtered Category Precision@3 (Context Purity)** | $\ge 0.950$ | **1.0000** | **+0.8222 (+82.2% Purity Lift)** |
+| **Unfiltered Vector Recall@3 (Turn 1 Baseline)** | Baseline | 0.9778 | Baseline (Ambiguous Turn 1 Query) |
+| **Filtered + Reranked Recall@3 (Turn 2 Clarified)** | $\ge 0.950$ | **1.0000** | **+0.0222 (+2.2% lift)** |
+| **Unfiltered Vector MRR@3 (Turn 1 Baseline)** | Baseline | 0.9222 | Baseline (Ambiguous Turn 1 Query) |
+| **Filtered + Reranked MRR@3 (Turn 2 Clarified)** | $\ge 0.800$ | **0.9667** | **+0.0444 (+4.4% lift)** |
+| **Unfiltered Category Precision@3 (Context Purity)** | Baseline | 0.4444 | Baseline (55.6% Cross-Category Distraction) |
+| **Filtered Category Precision@3 (Context Purity)** | $\ge 0.950$ | **1.0000** | **+0.5556 (+55.6% Purity Lift)** |
 | **Citation Faithfulness / Grounding Rate** | $100.0\%$ | **100.0%** | Zero Unsupported Claims |
-| **Turn 1 Gate Latency (p50 / p95)** | $< 5000\text{ ms}$ | **4125.4 ms / 8256.6 ms** | Production Ready |
-| **Turn 2 Synthesis Latency (p50 / p95)** | $< 9000\text{ ms}$ | **8265.4 ms / 8306.8 ms** | Production Ready |
+| **Turn 1 Gate Latency (p50 / p95)** | $< 1200\text{ ms}$ | **629.5 ms / 970.7 ms** | Production Ready |
+| **Turn 2 Synthesis Latency (p50 / p95)** | $< 2000\text{ ms}$ | **1189.8 ms / 1657.4 ms** | Production Ready |
 
 ### Conversational Evaluation Visualization
 

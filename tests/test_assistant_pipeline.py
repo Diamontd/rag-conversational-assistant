@@ -17,6 +17,14 @@ from src.assistant import assistant
 from src.eval_harness import calculate_category_precision
 
 
+@pytest.fixture(autouse=True)
+def isolate_trace_collector(tmp_path, monkeypatch):
+    """Ensure tests write traces to temporary storage without polluting benchmarks/langfuse_traces.json."""
+    test_trace_file = str(tmp_path / "test_session_traces.json")
+    monkeypatch.setattr(trace_collector, "trace_file_path", test_trace_file)
+    monkeypatch.setattr(trace_collector, "traces", [])
+
+
 def test_knowledge_base_corpus_integrity():
     """Verify domain expert and distractor documents are loaded with valid categories and metadata."""
     assert len(CORPUS_DOCUMENTS) >= 25
