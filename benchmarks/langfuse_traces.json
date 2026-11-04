@@ -1,50 +1,50 @@
 [
   {
-    "span_name": "retrieve_and_rerank",
-    "timestamp": 1793794802.9185646,
-    "latency_ms": 97.08,
-    "status": "SUCCESS",
-    "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-1001', title='Dropping a Spouse from Employer Health Insurance Outside Open Enrollment', category='health', sub_topic='spouse_removal', content='Can you drop your spouse from your health insurance policy? The answer strictly depends on employer plan rules and state regula"
-  },
-  {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793794807.2372644,
-    "latency_ms": 4315.44,
+    "timestamp": 1793795854.7724586,
+    "latency_ms": 4257.36,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": true,
       "clarifying_question": "Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?",
       "extracted_category": null,
-      "search_query_rewritten": "can i drop someone from my policy right now?"
+      "search_query_rewritten": "can i drop my spouse from my plan?"
     }
   },
   {
+    "span_name": "handle_conversation_turn",
+    "timestamp": 1793795854.7734563,
+    "latency_ms": 4258.36,
+    "status": "SUCCESS",
+    "error": null,
+    "output_summary": "{'type': 'clarification', 'decision': ConversationTurnDecision(needs_clarification=True, clarifying_question='Could you please specify which insurance category this relates to (e.g., health, auto, life, long-term care, renters, or Medicare)?', extracted_category=None, search_query_rewritten='can i d"
+  },
+  {
     "span_name": "analyze_dialog_state",
-    "timestamp": 1793794811.3861988,
-    "latency_ms": 4145.63,
+    "timestamp": 1793795858.9211829,
+    "latency_ms": 4146.73,
     "status": "SUCCESS",
     "error": null,
     "output": {
       "needs_clarification": false,
       "clarifying_question": null,
       "extracted_category": "health",
-      "search_query_rewritten": "can i drop someone from my policy right now? it is an employer health insurance policy, we are not divorced, and open enrollment is closed."
+      "search_query_rewritten": "can i drop my spouse from my plan? this is for my employer health insurance policy outside open enrollment."
     }
   },
   {
     "span_name": "retrieve_and_rerank",
-    "timestamp": 1793794811.3946095,
-    "latency_ms": 7.38,
+    "timestamp": 1793795859.0165656,
+    "latency_ms": 94.38,
     "status": "SUCCESS",
     "error": null,
     "output_summary": "[ScoredDocument(doc_id='DOC-1001', title='Dropping a Spouse from Employer Health Insurance Outside Open Enrollment', category='health', sub_topic='spouse_removal', content='Can you drop your spouse from your health insurance policy? The answer strictly depends on employer plan rules and state regula"
   },
   {
     "span_name": "synthesize_grounded_response",
-    "timestamp": 1793794815.750783,
-    "latency_ms": 4356.17,
+    "timestamp": 1793795863.1406016,
+    "latency_ms": 4124.04,
     "status": "SUCCESS",
     "error": null,
     "output": {
@@ -78,18 +78,10 @@
   },
   {
     "span_name": "handle_conversation_turn",
-    "timestamp": 1793794815.7518039,
-    "latency_ms": 8511.23,
+    "timestamp": 1793795863.1415977,
+    "latency_ms": 8367.14,
     "status": "SUCCESS",
     "error": null,
-    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='health', search_query_rewritten='can i drop someone from my policy right now? it is an employer health insurance policy, we are not divorced, and open enrollmen"
-  },
-  {
-    "span_name": "retrieve_and_rerank",
-    "timestamp": 1793794816.139608,
-    "latency_ms": 7.44,
-    "status": "SUCCESS",
-    "error": null,
-    "output_summary": "[ScoredDocument(doc_id='DOC-1001', title='Dropping a Spouse from Employer Health Insurance Outside Open Enrollment', category='health', sub_topic='spouse_removal', content='Can you drop your spouse from your health insurance policy? The answer strictly depends on employer plan rules and state regula"
+    "output_summary": "{'type': 'grounded_response', 'decision': ConversationTurnDecision(needs_clarification=False, clarifying_question=None, extracted_category='health', search_query_rewritten='can i drop my spouse from my plan? this is for my employer health insurance policy outside open enrollment.'), 'response': Grou"
   }
 ]
